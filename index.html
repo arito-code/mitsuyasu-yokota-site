@@ -29,6 +29,11 @@ background-size:cover;background-position:center;transform:scale(1.06);animation
 .kicker{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
 .hero h1{margin:0;font-weight:400;font-size:clamp(54px,8.2vw,122px);line-height:.84;letter-spacing:-.055em}
 .hero h1 em{font-style:normal;color:var(--gold2)} .hero p{max-width:640px;color:#d1cad2;line-height:1.95;font-size:15px;margin:30px 0}
+/* JP: English display tracking/breaks pull Japanese awkwardly */
+html[lang="ja"] h1,html[lang="ja"] h2{letter-spacing:.04em;line-height:1.2;word-break:keep-all;line-break:strict;overflow-wrap:normal}
+html[lang="ja"] .hero h1{letter-spacing:.06em;line-height:1.18}
+html[lang="ja"] .section-head{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
+html[lang="en"] h1,html[lang="en"] h2{word-break:normal;line-break:auto}
 .actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;gap:30px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s}
 .btn.primary{background:var(--gold);color:#090708} .btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(126,89,146,.2);border-color:var(--gold)}
 .scroll{position:absolute;right:4vw;bottom:8vh;z-index:4;font:9px Arial,sans-serif;letter-spacing:.22em;writing-mode:vertical-rl;color:#b9afb8}
@@ -124,7 +129,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 
 <main>
 <section id="waglass"><div class="wrap">
-  <div class="section-head reveal"><h2><span class="gold">Waglass.</span><br><span data-ja="伝統を、未来の光へ。" data-en="Heritage, reborn in light.">伝統を、未来の光へ。</span></h2><p data-ja="和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。" data-en="Waglass encases authentic Kyo-Yuzen kimono and Nishijin textiles within glass. Rather than imitating Japanese patterns, it carries the time, craft and memory of the original textile into a new work.">和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。</p></div>
+  <div class="section-head reveal"><h2><span class="gold">Waglass.</span><br><span data-ja="伝統を、<br>未来の光へ。" data-en="Heritage,<br>reborn in light.">伝統を、<br>未来の光へ。</span></h2><p data-ja="和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。" data-en="Waglass encases authentic Kyo-Yuzen kimono and Nishijin textiles within glass. Rather than imitating Japanese patterns, it carries the time, craft and memory of the original textile into a new work.">和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。</p></div>
   <div class="gallery reveal">
     <article class="art"><img src="assets/peacock-waglass.webp" alt="横田満康 和硝子 葵孔雀"><div class="art-cap"><b data-ja="葵孔雀" data-en="Peacock">葵孔雀</b><span>WAGLASS / KIMONO HERITAGE</span></div></article>
     <article class="art small"><img src="assets/dragon-waglass.webp" alt="横田満康 和硝子 神龍"><div class="art-cap"><b data-ja="神龍" data-en="Divine Dragon">神龍</b><span>WAGLASS / JAPAN</span></div></article>
@@ -140,7 +145,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 </div></section>
 
 <section id="kyoto" class="kyoto"><div class="kyoto-grid">
-  <div class="kyoto-copy reveal"><div class="number">08</div><h2><span class="gold">Kyoto Station.</span><br><span data-ja="京都の玄関口に、8作品。" data-en="Eight works at a gateway to Kyoto.">京都の玄関口に、8作品。</span></h2>
+  <div class="kyoto-copy reveal"><div class="number">08</div><h2><span class="gold">Kyoto Station.</span><br><span data-ja="京都の玄関口に、<br>8作品。" data-en="Eight works at a<br>gateway to Kyoto.">京都の玄関口に、<br>8作品。</span></h2>
   <p data-ja="横田満康本人の公開情報では、京都駅八条口に和硝子8作品が展示されています。海外のコレクターにとって「Kyoto Station」という場所そのものが、作品の来歴と信頼を直感的に伝える強い証拠になります。" data-en="According to Yokota's published record, eight Waglass works are displayed at Kyoto Station's Hachijo Exit. For international collectors, Kyoto Station itself offers immediate provenance, place and cultural credibility.">横田満康本人の公開情報では、京都駅八条口に和硝子8作品が展示されています。海外のコレクターにとって「Kyoto Station」という場所そのものが、作品の来歴と信頼を直感的に伝える強い証拠になります。</p>
   <div class="actions"><a class="btn" href="#purchase" data-ja="作品について問い合わせる →" data-en="INQUIRE ABOUT WORKS →">作品について問い合わせる →</a></div></div>
   <div class="kyoto-photo"><div class="media-unset" role="img" aria-label="京都駅展示写真 未設定"><p class="media-note">画像未設定：京都駅八条口の正式な展示写真は、baes_データからの選定・差し替え待ちです。</p></div></div>
@@ -158,20 +163,20 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 
 <section id="ink" class="ink"><div class="wrap ink-layout">
   <div class="ink-stage reveal"><img src="assets/calligraphy-dragon.webp" alt="横田満康 書 龍"></div>
-  <div class="ink-copy reveal"><div class="kicker">CALLIGRAPHY / PERSONAL COMMISSION</div><h2><span class="purple">書。</span><br><span data-ja="あなたを、一文字にする。" data-en="Your story, distilled into kanji.">あなたを、一文字にする。</span></h2>
+  <div class="ink-copy reveal"><div class="kicker">CALLIGRAPHY / PERSONAL COMMISSION</div><h2><span class="purple">書。</span><br><span data-ja="あなたを、<br>一文字にする。" data-en="Your story,<br>distilled into kanji.">あなたを、<br>一文字にする。</span></h2>
   <p data-ja="和硝子とは別に、横田さんは書作品も制作できます。海外向けには単なるJapanese Calligraphyではなく、依頼者の人生、価値観、願いを聞き、横田さんが象徴する一文字を選んで制作する「Personal Kanji Portrait」として設計します。" data-en="Yokota also creates calligraphic work. Rather than presenting it as generic Japanese calligraphy, the commission is conceived as a Personal Kanji Portrait: Yokota listens to the collector's story, values and intentions, then selects and writes the character that embodies them.">和硝子とは別に、横田さんは書作品も制作できます。海外向けには単なるJapanese Calligraphyではなく、依頼者の人生、価値観、願いを聞き、横田さんが象徴する一文字を選んで制作する「Personal Kanji Portrait」として設計します。</p>
   <div class="price">PERSONAL KANJI PORTRAIT — FROM US$1,500</div><a class="btn" href="#purchase" data-ja="オーダーについて相談する →" data-en="DISCUSS A COMMISSION →">オーダーについて相談する →</a></div>
 </div></section>
 
 <section><div class="wrap">
-  <div class="section-head reveal"><h2><span class="gold">A journey.</span><br><span data-ja="京都から、世界へ。" data-en="From Kyoto to the world.">京都から、世界へ。</span></h2><p data-ja="海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。" data-en="International history should be presented not as a résumé, but as a journey of Japanese craft moving beyond Japan. In 2024, Yokota's works were also exhibited and sold online in Taipei, Taiwan.">海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。</p></div>
+  <div class="section-head reveal"><h2><span class="gold">A journey.</span><br><span data-ja="京都から、<br>世界へ。" data-en="From Kyoto<br>to the world.">京都から、<br>世界へ。</span></h2><p data-ja="海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。" data-en="International history should be presented not as a résumé, but as a journey of Japanese craft moving beyond Japan. In 2024, Yokota's works were also exhibited and sold online in Taipei, Taiwan.">海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。</p></div>
   <div class="journey reveal"><div class="city"><b>KYOTO</b><span>JAPAN / ORIGIN</span></div><div class="city"><b>NEW YORK</b><span>USA / EXHIBITION</span></div><div class="city"><b>AUSTIN</b><span>USA / EXHIBITION</span></div><div class="city"><b>PARIS · DUBAI</b><span>INTERNATIONAL</span></div></div>
   <div class="taiwan reveal"><div class="media-unset" role="img" aria-label="台湾展示写真 未設定"><p class="media-note">画像未設定：台北展示（2024）の正式写真は、baes_データからの選定・差し替え待ちです。</p></div><div><div class="kicker">TAIPEI / 2024</div><h3 style="font-size:34px;font-weight:400;margin:12px 0" data-ja="リアル展示 × オンライン販売" data-en="Physical exhibition × Online sales">リアル展示 × オンライン販売</h3><p data-ja="台北市の店舗で実作品を展示し、QRコードから解説・オンライン購入へつなげるOMO型の販売も実施されています。この経験は、今後の海外サイトと現地展示を接続するモデルとして非常に相性が良いです。" data-en="In Taipei, physical display was connected to online information and purchasing through QR codes. This OMO approach is a strong model for connecting the new international website with future overseas exhibitions.">台北市の店舗で実作品を展示し、QRコードから解説・オンライン購入へつなげるOMO型の販売も実施されています。この経験は、今後の海外サイトと現地展示を接続するモデルとして非常に相性が良いです。</p></div></div>
 </div></section>
 
 
 <section class="collector"><div class="wrap">
-  <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、所有する。" data-en="From artwork to ownership.">作品を、所有する。</span></h2><p data-ja="高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。" data-en="High-value art becomes purchasable when material, dimensions, year, uniqueness, provenance and delivery are as clear as the photography. These cards demonstrate the route to detailed work pages.">高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。</p></div>
+  <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、<br>所有する。" data-en="From artwork<br>to ownership.">作品を、<br>所有する。</span></h2><p data-ja="高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。" data-en="High-value art becomes purchasable when material, dimensions, year, uniqueness, provenance and delivery are as clear as the photography. These cards demonstrate the route to detailed work pages.">高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。</p></div>
   <div class="works-preview reveal">
     <article class="work-preview"><img src="assets/peacock-waglass.webp" alt="Waglass Peacock"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="葵孔雀" data-en="Peacock">葵孔雀</h3><p data-ja="作品ごとの物語、使用した着物・帯、光による表情の変化を記載。" data-en="A dedicated story explaining the textile, composition and how the work changes with light.">作品ごとの物語、使用した着物・帯、光による表情の変化を記載。</p><div class="wp-meta"><span>YEAR: TBD</span><span>SIZE: TBD</span><span>MATERIAL: TBD</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></article>
     <article class="work-preview"><img src="assets/dragon-waglass-alt.webp" alt="Waglass Dragon"><div class="wp-copy"><div class="type">WAGLASS / SIGNATURE WORK</div><h3 data-ja="神龍" data-en="Divine Dragon">神龍</h3><p data-ja="完成作品には多角度写真、設置イメージ、真作証明、保険付き国際配送情報を付与。" data-en="Each work page should include multiple views, installation imagery, authenticity documentation and insured international shipping information.">完成作品には多角度写真、設置イメージ、真作証明、保険付き国際配送情報を付与。</p><div class="wp-meta"><span>YEAR: TBD</span><span>SIZE: TBD</span><span>MATERIAL: TBD</span><span>SHIPPING: WORLDWIDE</span></div><div class="wp-price">PRICE ON REQUEST</div></div></article>
@@ -200,7 +205,9 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 const jp=document.getElementById('jp'), en=document.getElementById('en');
 function setLang(lang){
   document.documentElement.lang=lang;
-  document.querySelectorAll('[data-ja]').forEach(el=>el.innerHTML=el.dataset[lang]);
+  document.querySelectorAll('[data-ja]').forEach(el=>{
+    el.innerHTML=el.getAttribute('data-'+lang)||'';
+  });
   jp.classList.toggle('active',lang==='ja'); en.classList.toggle('active',lang==='en');
 }
 jp.onclick=()=>setLang('ja'); en.onclick=()=>setLang('en');
