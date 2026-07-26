@@ -54,6 +54,8 @@ main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,1
 .kyoto-photo{position:relative;overflow:hidden} .kyoto-photo img{width:100%;height:100%;object-fit:cover;transition:transform .2s linear} .kyoto-photo:after{content:"KYOTO STATION / HACHIJO EXIT";position:absolute;left:25px;bottom:24px;padding:9px 12px;background:rgba(5,5,7,.78);border:1px solid var(--line);font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold2)}
 .artist-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)} .artist-photo{min-height:690px;overflow:hidden} .artist-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.15) contrast(1.04)}
 .artist-copy{padding:70px 60px;background:linear-gradient(145deg,#0f0d12,#151019)} .artist-copy h3{font-size:43px;font-weight:400;margin:12px 0 24px} .artist-copy p{color:var(--muted);line-height:2}
+.artist-link{display:inline-block;transition:opacity .3s,transform .3s}.artist-link:hover{opacity:.85;transform:translateX(4px)}
+.artist-link .kicker{margin-bottom:0}.artist-link h3{margin-top:12px}
 .credentials{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:35px} .cred{background:#0d0c10;padding:20px} .cred b{color:var(--gold);display:block;font-size:18px;margin-bottom:7px} .cred span{color:#9f97a1;font:10px Arial,sans-serif;letter-spacing:.1em}
 .ink{overflow:hidden;background:radial-gradient(circle at 80% 50%,rgba(86,52,106,.22),transparent 30%),#09080b} .ink-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
 .ink-stage{min-height:560px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#e9dfcf,#c7bba8);overflow:hidden}
@@ -163,7 +165,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 <section id="artist"><div class="wrap">
   <div class="artist-grid reveal">
     <div class="artist-photo"><img src="assets/portrait-yokota.webp" alt="横田満康 MBS京都知新"></div>
-    <div class="artist-copy"><div class="kicker">THE ARTIST</div><h3>横田満康<br><span class="gold">Mitsuyasu Yokota</span></h3>
+    <div class="artist-copy"><a class="artist-link" href="history.html" aria-label="実績・来歴を見る"><div class="kicker">THE ARTIST</div><h3>横田満康<br><span class="gold">Mitsuyasu Yokota</span></h3></a>
       <p data-ja="建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。" data-en="An architect with a background in kimono design, Mitsuyasu Yokota began developing Waglass as a way to carry Japanese textile heritage into contemporary space. Since 2013, his work has expanded from Kyoto across Japan and overseas. His architectural perspective allows each work to be conceived not only as an object, but as part of a place.">建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。</p>
       <div class="credentials"><div class="cred"><b>Kyoto Station</b><span>8 WORKS / HACHIJO EXIT</span></div><div class="cred"><b>Nagoya Castle</b><span>HONMARU PALACE</span></div><div class="cred"><b>New York</b><span>INTERNATIONAL EXHIBITIONS</span></div><div class="cred"><b>Tokyo</b><span>KABUKIZA / BIG SIGHT</span></div></div>
     </div>
