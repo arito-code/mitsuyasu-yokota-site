@@ -33,19 +33,27 @@ h2{font-size:clamp(42px,5vw,76px);font-weight:400;line-height:.95;margin:0}.intr
 .card .media-unset{min-height:300px}
 .hero-img .media-unset{min-height:600px}
 
+
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{letter-spacing:.04em;line-height:1.25;word-break:keep-all;line-break:strict}
+html[lang="ja"] h1{letter-spacing:.06em;line-height:1.18}
+.lang{display:flex;border:1px solid var(--l);border-radius:99px;overflow:hidden;gap:0}
+.lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif}
+.lang .active{background:var(--g);color:#0b0908}
+.nav-actions{display:flex;align-items:center;gap:16px}
+
 </style></head>
 <body>
-<nav class="nav"><div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">MITSUYASU YOKOTA</a></div><small>SELECTED HISTORY / PROVENANCE</small></nav>
+<nav class="nav"><div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">MITSUYASU YOKOTA</a></div><div class="nav-actions"><small data-ja="選ばれた実績 / 来歴" data-en="SELECTED HISTORY / PROVENANCE">選ばれた実績 / 来歴</small><span class="lang"><button id="jp" class="active">JP</button><button id="en">EN</button></span></div></nav>
 
 <header class="hero">
 <div class="hero-copy"><div class="kicker">Artist · Architect · Spatial Designer / Kyoto, Japan</div>
-<h1>Selected<br><span>History.</span></h1>
+<h1 data-ja="選ばれた<br><span>実績。</span>" data-en="Selected<br><span>History.</span>">選ばれた<br><span>実績。</span></h1>
 <p>横田満康の歩みを、作品の来歴として。和硝子の誕生、京都駅での展示、国内の文化施設、そしてニューヨークから台湾へ。海外のコレクターが「誰が、どこで、どのように評価されてきたか」を追える構成です。</p></div>
 <div class="hero-img"><img src="assets/portrait-yokota.webp" alt="横田満康"></div>
 </header>
 
 <section><div class="wrap intro">
-<h2>Japanese heritage,<br><span style="color:var(--g)">reimagined.</span></h2>
+<h2 data-ja="日本の伝統を、<br><span style='color:var(--g)'>いまの光へ。</span>" data-en="Japanese heritage,<br><span style='color:var(--g)'>reimagined.</span>">日本の伝統を、<br><span style='color:var(--g)'>いまの光へ。</span></h2>
 <div><p>横田満康は建築家として空間づくりに携わり、着物デザインの経験を背景に、京友禅や西陣織の帯そのものをガラスに封じ込める「和硝子」を展開してきました。MBS『京都知新』は、2013年から和硝子を本格的に制作し始めたことを紹介しています。</p>
 <p>このページでは、第三者媒体や施設・企業発表で確認しやすい実績を優先掲載し、賞歴・寄贈歴などは証明資料が揃った段階で追加する設計にしています。</p></div>
 </div>
@@ -57,7 +65,7 @@ h2{font-size:clamp(42px,5vw,76px);font-weight:400;line-height:.95;margin:0}.intr
 </div></section>
 
 <section><div class="wrap">
-<div class="kicker">SELECTED TIMELINE</div><h2 style="margin-top:18px">Exhibitions & milestones.</h2>
+<div class="kicker">SELECTED TIMELINE</div><h2 style="margin-top:18px" data-ja="展示と、<br>歩み。" data-en="Exhibitions &<br>milestones.">展示と、<br>歩み。</h2>
 <div class="timeline">
 <div class="event"><div class="year">2013</div><div><h3>和硝子を本格制作</h3><p>MBS『京都知新』は、横田氏が着物デザインと建築の経験を活かし、2013年から「和硝子」を本格的に制作し始めたと紹介。</p><a class="source" href="https://www.mbs.jp/kyoto-chishin/tv/2017/07_23.shtml">MBS KYOTO CHISHIN ↗</a></div></div>
 <div class="event"><div class="year">2014–15</div><div><h3>New York / Nippon Club & Japan Gallery</h3><p>ニューヨーク日本クラブでの個展は在ニューヨーク日本国総領事館の後援を受けたと和硝子屋の発表で紹介。NYBizにも2014年10月の「和硝子の世界」開催記録が残る。</p><a class="source" href="https://www.atpress.ne.jp/news/93816">ATPRESS ↗</a></div></div>
@@ -79,15 +87,15 @@ h2{font-size:clamp(42px,5vw,76px);font-weight:400;line-height:.95;margin:0}.intr
 <a class="btn" href="https://jr-central.co.jp/news/release/_pdf/000034597.pdf">VIEW SOURCE</a></div>
 </div></section>
 
-<section><div class="wrap"><div class="kicker">SELECTED VISUAL RECORDS</div><h2 style="margin:18px 0 45px">Works & places.</h2>
+<section><div class="wrap"><div class="kicker">SELECTED VISUAL RECORDS</div><h2 style="margin:18px 0 45px" data-ja="作品と、<br>場所。" data-en="Works &<br>places.">作品と、<br>場所。</h2>
 <div class="cards">
 <div class="card"><img src="assets/peacock-waglass.webp" alt="和硝子 孔雀"><div><h3>Waglass / Peacock</h3><p>名古屋城「孔雀の間」での展示テーマとも親和する、和硝子の代表的な視覚世界。</p></div></div>
-<div class="card"><img src="assets/dragon-waglass.webp" alt="和硝子 龍"><div><h3>Waglass / Dragon</h3><p>金・黒・和柄の強い作品群は、海外のラグジュアリー空間との相性が高い。</p></div></div>
+<div class="card"><img src="assets/dragon-waglass.webp?v=3" alt="和硝子 龍"><div><h3>Waglass / Dragon</h3><p>金・黒・和柄の強い作品群は、海外のラグジュアリー空間との相性が高い。</p></div></div>
 <div class="card"><div class="media-unset" role="img" aria-label="台湾展示写真 未設定"><p class="media-note">画像未設定：台北展示（2024）の正式写真は、baes_データからの選定・差し替え待ちです。</p></div><div><h3>Taipei / 2024</h3><p>現物体験とオンライン購入をつなぐ販売モデル。今後の海外展示＋自社ECの雛形になる。</p></div></div>
 </div></div></section>
 
 <section><div class="wrap pending">
-<h3>本番公開前に証明資料を揃えたい実績</h3>
+<h3 data-ja="本番公開前に、<br>証明資料を揃えたい実績" data-en="Records to verify<br>before public launch">本番公開前に、<br>証明資料を揃えたい実績</h3>
 <ul>
 <li>第30回チェルシー国際ファインアートコンペティションの入選・受賞区分と正式年</li>
 <li>東久邇宮文化褒賞の受賞証明と正式表記</li>
@@ -98,5 +106,18 @@ h2{font-size:clamp(42px,5vw,76px);font-weight:400;line-height:.95;margin:0}.intr
 </ul>
 </div></section>
 
-<div class="cta"><div class="kicker">COLLECT / COMMISSION / COLLABORATE</div><h2>A history that becomes<br><span style="color:var(--g2)">provenance.</span></h2><a class="btn" href="#">REQUEST A PRIVATE VIEWING</a></div>
+<div class="cta"><div class="kicker">COLLECT / COMMISSION / COLLABORATE</div><h2 data-ja="歩みが、<br><span style='color:var(--g2)'>来歴になる。</span>" data-en="A history that becomes<br><span style='color:var(--g2)'>provenance.</span>">歩みが、<br><span style='color:var(--g2)'>来歴になる。</span></h2><a class="btn" href="index.html#purchase" data-ja="プライベート相談へ →" data-en="REQUEST A PRIVATE VIEWING →">プライベート相談へ →</a></div>
+
+<script>
+const jp=document.getElementById('jp'), en=document.getElementById('en');
+function setLang(lang){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-ja]').forEach(el=>{
+    el.innerHTML=el.getAttribute('data-'+lang)||'';
+  });
+  if(jp&&en){jp.classList.toggle('active',lang==='ja'); en.classList.toggle('active',lang==='en');}
+}
+if(jp&&en){jp.onclick=()=>setLang('ja'); en.onclick=()=>setLang('en');}
+</script>
+
 </body></html>
