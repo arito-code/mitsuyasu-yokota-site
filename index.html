@@ -23,7 +23,6 @@ background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filt
 .hero{height:100vh;min-height:720px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:-5%;background-image:linear-gradient(90deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.72) 34%,rgba(5,5,7,.08) 72%),url('assets/peacock-waglass.webp');
 background-size:cover;background-position:center;transform:scale(1.06);animation:heroZoom 14s ease-in-out infinite alternate}
-.hero-bg:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;background:linear-gradient(180deg,rgba(245,241,232,.18) 0%,rgba(245,241,232,.1) 42%,rgba(245,241,232,.04) 72%,transparent)}
 .hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 42%,rgba(86,52,106,.18),transparent 38%),linear-gradient(180deg,transparent 65%,var(--black))}
 @keyframes heroZoom{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.11) translate3d(-1.5%,.7%,0)}}
 .hero-copy{position:relative;z-index:3;width:min(760px,86vw);padding:0 0 10vh 7vw}
@@ -71,8 +70,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 @media(max-width:950px){
 .navlinks>a{display:none}
 .hero{min-height:640px}
-.hero-bg{background-image:linear-gradient(180deg,rgba(5,5,7,.42) 0%,rgba(5,5,7,.78) 48%,rgba(5,5,7,.94) 100%),linear-gradient(90deg,rgba(5,5,7,.88) 0%,rgba(5,5,7,.55) 58%,rgba(5,5,7,.28) 100%),url('assets/peacock-waglass.webp')}
-.hero-bg:before{opacity:1}
+.hero-bg{background-image:linear-gradient(180deg,rgba(5,5,7,.45) 0%,rgba(5,5,7,.8) 48%,rgba(5,5,7,.95) 100%),linear-gradient(90deg,rgba(5,5,7,.9) 0%,rgba(5,5,7,.58) 58%,rgba(5,5,7,.3) 100%),linear-gradient(180deg,rgba(245,241,232,.22) 0%,rgba(245,241,232,.12) 45%,rgba(245,241,232,.06) 100%),url('assets/peacock-waglass.webp')}
 .hero-copy{padding:0 6vw 10vh;width:min(760px,92vw)}
 .gallery{grid-template-columns:1fr}.section-head,.kyoto-grid,.artist-grid,.ink-layout,.taiwan{grid-template-columns:1fr}.kyoto-photo{min-height:470px}.journey{grid-template-columns:1fr 1fr}.pathways{grid-template-columns:1fr}
 }
