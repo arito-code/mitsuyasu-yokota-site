@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mitsuyasu Yokota — Waglass / Calligraphy / Space</title>
+<style>
+:root{
+  --black:#070709; --black2:#0d0c10; --panel:#111015;
+  --gold:#c9a45d; --gold2:#ead49d; --purple:#56346a; --purple2:#7d5a91;
+  --white:#f5f1e8; --muted:#a9a2ab; --line:rgba(201,164,93,.28);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none} button{font:inherit}
+#progress{position:fixed;left:0;top:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--purple2));width:0;z-index:100}
+.nav{position:fixed;z-index:50;left:0;right:0;top:0;padding:20px 4vw;display:flex;align-items:center;justify-content:space-between;
+background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filter:blur(10px)}
+.brand strong{display:block;font:500 16px/1.2 Georgia,serif;letter-spacing:.18em;color:var(--gold2)} .brand small{font:10px Arial,sans-serif;letter-spacing:.16em;color:#c8bfcb}
+.navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
+.lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif} .lang .active{background:var(--gold);color:#0b0908}
+.hero{height:100vh;min-height:720px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:-5%;background-image:linear-gradient(90deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.72) 34%,rgba(5,5,7,.08) 72%),url('assets/peacock-waglass.webp');
+background-size:cover;background-position:center;transform:scale(1.06);animation:heroZoom 14s ease-in-out infinite alternate}
+.hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 42%,rgba(86,52,106,.18),transparent 38%),linear-gradient(180deg,transparent 65%,var(--black))}
+@keyframes heroZoom{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.11) translate3d(-1.5%,.7%,0)}}
+.hero-copy{position:relative;z-index:3;width:min(760px,86vw);padding:0 0 10vh 7vw}
+.kicker{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.hero h1{margin:0;font-weight:400;font-size:clamp(54px,8.2vw,122px);line-height:.84;letter-spacing:-.055em}
+.hero h1 em{font-style:normal;color:var(--gold2)} .hero p{max-width:640px;color:#d1cad2;line-height:1.95;font-size:15px;margin:30px 0}
+.actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;gap:30px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s}
+.btn.primary{background:var(--gold);color:#090708} .btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(126,89,146,.2);border-color:var(--gold)}
+.scroll{position:absolute;right:4vw;bottom:8vh;z-index:4;font:9px Arial,sans-serif;letter-spacing:.22em;writing-mode:vertical-rl;color:#b9afb8}
+main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,164,93,.12)} .wrap{max-width:1420px;margin:auto}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-bottom:55px;align-items:end} h2{font-size:clamp(45px,6vw,86px);font-weight:400;line-height:.9;margin:0}
+.section-head p{margin:0;color:var(--muted);line-height:1.95;max-width:570px} .gold{color:var(--gold)} .purple{color:#a98aba}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease} .reveal.show{opacity:1;transform:none}
+.gallery{display:grid;grid-template-columns:1.15fr .7fr .7fr;gap:18px} .art{position:relative;min-height:520px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.art.small{min-height:520px} .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.04);transition:transform 1.1s cubic-bezier(.2,.7,.2,1),filter .6s}
+.art:hover img{transform:scale(1.065);filter:saturate(1.1) contrast(1.08)} .art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(2,2,4,.88))}
+.art-cap{position:absolute;z-index:2;bottom:22px;left:22px;right:22px} .art-cap b{display:block;color:var(--gold2);font-size:20px;font-weight:400;margin-bottom:7px}
+.art-cap span{font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#c9c1cb}
+.kyoto{padding:0!important;overflow:hidden} .kyoto-grid{display:grid;grid-template-columns:.78fr 1.22fr;min-height:720px}
+.kyoto-copy{padding:110px 7vw;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 20% 40%,rgba(86,52,106,.18),transparent 35%),var(--black2)}
+.kyoto-copy .number{font:70px/1 Georgia,serif;color:var(--gold);opacity:.95} .kyoto-copy h2{margin:20px 0 25px} .kyoto-copy p{color:var(--muted);line-height:1.95}
+.kyoto-photo{position:relative;overflow:hidden} .kyoto-photo img{width:100%;height:100%;object-fit:cover;transition:transform .2s linear} .kyoto-photo:after{content:"KYOTO STATION / HACHIJO EXIT";position:absolute;left:25px;bottom:24px;padding:9px 12px;background:rgba(5,5,7,.78);border:1px solid var(--line);font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold2)}
+.artist-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)} .artist-photo{min-height:690px;overflow:hidden} .artist-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.15) contrast(1.04)}
+.artist-copy{padding:70px 60px;background:linear-gradient(145deg,#0f0d12,#151019)} .artist-copy h3{font-size:43px;font-weight:400;margin:12px 0 24px} .artist-copy p{color:var(--muted);line-height:2}
+.credentials{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:35px} .cred{background:#0d0c10;padding:20px} .cred b{color:var(--gold);display:block;font-size:18px;margin-bottom:7px} .cred span{color:#9f97a1;font:10px Arial,sans-serif;letter-spacing:.1em}
+.ink{overflow:hidden;background:radial-gradient(circle at 80% 50%,rgba(86,52,106,.22),transparent 30%),#09080b} .ink-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.ink-stage{min-height:560px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#e9dfcf,#c7bba8);overflow:hidden}
+.ink-stage:before{content:"書";font-size:min(42vw,420px);color:#0c0b0b;line-height:.7;transform:rotate(-5deg);opacity:.92;font-family:"Yu Mincho",serif}
+.ink-stage:after{content:"正式な書作品写真に差し替え";position:absolute;bottom:20px;left:20px;color:#2c2522;font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.ink-copy h2{margin-bottom:30px} .ink-copy p{color:var(--muted);line-height:2} .price{margin:28px 0;color:var(--gold2);font:16px Arial,sans-serif;letter-spacing:.08em}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)} .city{padding:34px 25px;min-height:210px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.city b{font-size:27px;font-weight:400;color:var(--gold2)} .city span{display:block;margin-top:75px;color:#a59da7;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.taiwan{margin-top:26px;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr} .taiwan img{width:100%;height:100%;object-fit:cover} .taiwan div{padding:45px} .taiwan p{color:var(--muted);line-height:1.9}
+.purchase{background:linear-gradient(180deg,#0a090c,#060607)} .pathways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .path{padding:35px;border:1px solid var(--line);min-height:245px;transition:.4s;position:relative;overflow:hidden}
+.path:hover{background:rgba(86,52,106,.12);transform:translateY(-6px)} .path .num{font:11px Arial,sans-serif;color:var(--gold);letter-spacing:.18em} .path h3{font-size:30px;font-weight:400;margin:50px 0 12px} .path p{color:#99919d;line-height:1.7;font-size:13px} .path .arrow{position:absolute;right:25px;bottom:24px;color:var(--gold);font-size:22px}
+footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+@media(max-width:950px){.navlinks>a{display:none}.hero-copy{padding-left:6vw}.gallery{grid-template-columns:1fr}.section-head,.kyoto-grid,.artist-grid,.ink-layout,.taiwan{grid-template-columns:1fr}.kyoto-photo{min-height:470px}.journey{grid-template-columns:1fr 1fr}.pathways{grid-template-columns:1fr}}
+
+.media-unset{position:relative;min-height:420px;background:linear-gradient(135deg,#141218,#0b0a0e);border:1px dashed rgba(201,164,93,.35);display:flex;align-items:center;justify-content:center;padding:28px}
+.media-unset .media-note{max-width:420px;margin:0;padding:14px 16px;border:1px solid rgba(201,164,93,.35);background:rgba(5,5,7,.82);color:var(--gold2,#EAD49D);font:12px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em}
+.media-note-inline{margin:14px 0 0;color:#c9a45d;font:11px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em;opacity:.9}
+.ink-stage{background:#111015 !important}
+.ink-stage img{width:100%;height:100%;object-fit:contain;padding:36px;box-sizing:border-box}
+.ink-stage:before,.ink-stage:after{display:none !important}
+.kyoto-photo .media-unset,.taiwan .media-unset{min-height:100%;width:100%}
+.card .media-unset{min-height:300px}
+.hero-img .media-unset{min-height:600px}
+
+</style>
+
+<style>
+.proof-strip{padding:0 7vw 70px;background:#070709}
+.proof-inner{max-width:1420px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(201,164,93,.28)}
+.proof{padding:24px 22px;border-right:1px solid rgba(201,164,93,.22);background:linear-gradient(145deg,#0c0b0f,#0f0d13)}
+.proof:last-child{border-right:0}.proof b{display:block;color:#ead49d;font:22px Georgia,serif;margin-bottom:8px}.proof span{color:#918995;font:9px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;line-height:1.6}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,164,93,.28);margin-top:28px}
+.process .step{background:#0c0b0f;padding:26px 23px;min-height:155px}.step i{font-style:normal;font:10px Arial,sans-serif;color:#c9a45d;letter-spacing:.15em}.step h4{font-size:22px;font-weight:400;margin:28px 0 7px}.step p{color:#948b98;font-size:13px;line-height:1.65;margin:0}
+.collector{background:radial-gradient(circle at 20% 50%,rgba(86,52,106,.18),transparent 32%),#09080b}
+.assurance{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+.assure{border:1px solid rgba(201,164,93,.28);padding:26px 22px;min-height:190px}.assure .icon{color:#c9a45d;font:24px Georgia,serif}.assure h3{font-weight:400;font-size:20px;margin:25px 0 9px}.assure p{color:#948b98;line-height:1.7;font-size:13px;margin:0}
+.works-preview{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.work-preview{border:1px solid rgba(201,164,93,.28);display:grid;grid-template-columns:.9fr 1.1fr;background:#0c0b0f;overflow:hidden}
+.work-preview img{width:100%;height:360px;object-fit:cover}.wp-copy{padding:28px}.wp-copy .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:#c9a45d;text-transform:uppercase}.wp-copy h3{font-size:28px;font-weight:400;margin:15px 0}.wp-copy p{color:#918995;line-height:1.75;font-size:13px}.wp-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:25px 0;color:#bbb2bd;font:10px Arial,sans-serif;letter-spacing:.08em}.wp-price{font:18px Georgia,serif;color:#ead49d}
+@media(max-width:950px){.proof-inner,.process,.assurance{grid-template-columns:1fr 1fr}.works-preview,.work-preview{grid-template-columns:1fr}}
+@media(max-width:600px){.proof-inner,.process,.assurance{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<div id="progress"></div>
+<nav class="nav">
+  <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="Waglass / 書 / 空間" data-en="Waglass / Calligraphy / Space">Waglass / 書 / 空間</small></div>
+  <div class="navlinks">
+    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="#ink">Calligraphy</a><a href="history.html">History</a><a href="#purchase">Commission</a>
+    <span class="lang"><button id="jp" class="active">JP</button><button id="en">EN</button></span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-copy">
+    <div class="kicker" data-ja="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER" data-en="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER">KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER</div>
+    <h1 data-ja="日本の記憶を、<br><em>光の中へ。</em>" data-en="Preserving<br><em>Japanese Memory.</em>">日本の記憶を、<br><em>光の中へ。</em></h1>
+    <p data-ja="京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。そして、人の想いや生き方を一筆に凝縮する「書」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。" data-en="Waglass preserves the memory of Kyo-Yuzen kimono and Nishijin textiles within glass. Calligraphy distills a person's story into a single gesture. Mitsuyasu Yokota transforms Japanese heritage into contemporary works made to live again in modern spaces.">京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。そして、人の想いや生き方を一筆に凝縮する「書」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。</p>
+    <div class="actions"><a class="btn primary" href="#waglass" data-ja="作品を見る →" data-en="AVAILABLE WORKS →">作品を見る →</a><a class="btn" href="#purchase" data-ja="プライベートオーダー →" data-en="PRIVATE COMMISSION →">プライベートオーダー →</a></div>
+  </div>
+  <div class="scroll">SCROLL</div>
+</header>
+
+<section class="proof-strip">
+  <div class="proof-inner reveal">
+    <div class="proof"><b>Kyoto Station</b><span data-ja="JR東海公式発表で和硝子展示を確認" data-en="Waglass display documented by JR Central">JR東海公式発表で和硝子展示を確認</span></div>
+    <div class="proof"><b>Nagoya Castle</b><span data-ja="本丸御殿「孔雀の間」で展覧会" data-en="Exhibition at the Honmaru Palace">本丸御殿「孔雀の間」で展覧会</span></div>
+    <div class="proof"><b>MBS Kyoto Chishin</b><span data-ja="横田満康と和硝子を特集" data-en="Featured profile on Yokota and Waglass">横田満康と和硝子を特集</span></div>
+    <div class="proof"><b>International</b><span data-ja="New York / Austin / Taipei ほか" data-en="New York / Austin / Taipei and beyond">New York / Austin / Taipei ほか</span></div>
+  </div>
+</section>
+
+
+<main>
+<section id="waglass"><div class="wrap">
+  <div class="section-head reveal"><h2><span class="gold">Waglass.</span><br><span data-ja="伝統を、未来の光へ。" data-en="Heritage, reborn in light.">伝統を、未来の光へ。</span></h2><p data-ja="和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。" data-en="Waglass encases authentic Kyo-Yuzen kimono and Nishijin textiles within glass. Rather than imitating Japanese patterns, it carries the time, craft and memory of the original textile into a new work.">和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。</p></div>
+  <div class="gallery reveal">
+    <article class="art"><img src="assets/peacock-waglass.webp" alt="横田満康 和硝子 葵孔雀"><div class="art-cap"><b data-ja="葵孔雀" data-en="Peacock">葵孔雀</b><span>WAGLASS / KIMONO HERITAGE</span></div></article>
+    <article class="art small"><img src="assets/dragon-waglass.webp" alt="横田満康 和硝子 神龍"><div class="art-cap"><b data-ja="神龍" data-en="Divine Dragon">神龍</b><span>WAGLASS / JAPAN</span></div></article>
+    <article class="art small"><img src="assets/washitsu-waglass.webp" alt="横田満康 和硝子 展示"><div class="art-cap"><b data-ja="和硝子の空間" data-en="Waglass in Space">和硝子の空間</b><span>ART / ARCHITECTURE / SPACE</span></div></article>
+  </div>
+
+  <div class="process reveal">
+    <div class="step"><i>01 / HERITAGE</i><h4 data-ja="本物の着物・帯" data-en="Authentic textile">本物の着物・帯</h4><p data-ja="京友禅や西陣織など、実物の日本伝統素材を起点にする。" data-en="Beginning with authentic Japanese textiles such as Kyo-Yuzen and Nishijin weaving.">京友禅や西陣織など、実物の日本伝統素材を起点にする。</p></div>
+    <div class="step"><i>02 / TRANSFORMATION</i><h4 data-ja="硝子の中へ" data-en="Preserved in glass">硝子の中へ</h4><p data-ja="素材の記憶を残しながら、光と空間の現代作品へ変換する。" data-en="Transforming textile memory into a contemporary work of light and space.">素材の記憶を残しながら、光と空間の現代作品へ変換する。</p></div>
+    <div class="step"><i>03 / ONE OF ONE</i><h4 data-ja="一点物として所有する" data-en="Owned as one of one">一点物として所有する</h4><p data-ja="素材、構成、光の表情が異なる、コレクターのための唯一の作品。" data-en="A singular work whose material, composition and relationship with light cannot be duplicated.">素材、構成、光の表情が異なる、コレクターのための唯一の作品。</p></div>
+  </div>
+
+</div></section>
+
+<section id="kyoto" class="kyoto"><div class="kyoto-grid">
+  <div class="kyoto-copy reveal"><div class="number">08</div><h2><span class="gold">Kyoto Station.</span><br><span data-ja="京都の玄関口に、8作品。" data-en="Eight works at a gateway to Kyoto.">京都の玄関口に、8作品。</span></h2>
+  <p data-ja="横田満康本人の公開情報では、京都駅八条口に和硝子8作品が展示されています。海外のコレクターにとって「Kyoto Station」という場所そのものが、作品の来歴と信頼を直感的に伝える強い証拠になります。" data-en="According to Yokota's published record, eight Waglass works are displayed at Kyoto Station's Hachijo Exit. For international collectors, Kyoto Station itself offers immediate provenance, place and cultural credibility.">横田満康本人の公開情報では、京都駅八条口に和硝子8作品が展示されています。海外のコレクターにとって「Kyoto Station」という場所そのものが、作品の来歴と信頼を直感的に伝える強い証拠になります。</p>
+  <div class="actions"><a class="btn" href="#purchase" data-ja="作品について問い合わせる →" data-en="INQUIRE ABOUT WORKS →">作品について問い合わせる →</a></div></div>
+  <div class="kyoto-photo"><div class="media-unset" role="img" aria-label="京都駅展示写真 未設定"><p class="media-note">画像未設定：京都駅八条口の正式な展示写真は、baes_データからの選定・差し替え待ちです。</p></div></div>
+</div></section>
+
+<section id="artist"><div class="wrap">
+  <div class="artist-grid reveal">
+    <div class="artist-photo"><img src="assets/portrait-yokota.webp" alt="横田満康 MBS京都知新"></div>
+    <div class="artist-copy"><div class="kicker">THE ARTIST</div><h3>横田満康<br><span class="gold">Mitsuyasu Yokota</span></h3>
+      <p data-ja="建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。" data-en="An architect with a background in kimono design, Mitsuyasu Yokota began developing Waglass as a way to carry Japanese textile heritage into contemporary space. Since 2013, his work has expanded from Kyoto across Japan and overseas. His architectural perspective allows each work to be conceived not only as an object, but as part of a place.">建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。</p>
+      <div class="credentials"><div class="cred"><b>Kyoto Station</b><span>8 WORKS / HACHIJO EXIT</span></div><div class="cred"><b>Nagoya Castle</b><span>HONMARU PALACE</span></div><div class="cred"><b>New York</b><span>INTERNATIONAL EXHIBITIONS</span></div><div class="cred"><b>Tokyo</b><span>KABUKIZA / BIG SIGHT</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="ink" class="ink"><div class="wrap ink-layout">
+  <div class="ink-stage reveal"><img src="assets/calligraphy-dragon.webp" alt="横田満康 書 龍"></div>
+  <div class="ink-copy reveal"><div class="kicker">CALLIGRAPHY / PERSONAL COMMISSION</div><h2><span class="purple">書。</span><br><span data-ja="あなたを、一文字にする。" data-en="Your story, distilled into kanji.">あなたを、一文字にする。</span></h2>
+  <p data-ja="和硝子とは別に、横田さんは書作品も制作できます。海外向けには単なるJapanese Calligraphyではなく、依頼者の人生、価値観、願いを聞き、横田さんが象徴する一文字を選んで制作する「Personal Kanji Portrait」として設計します。" data-en="Yokota also creates calligraphic work. Rather than presenting it as generic Japanese calligraphy, the commission is conceived as a Personal Kanji Portrait: Yokota listens to the collector's story, values and intentions, then selects and writes the character that embodies them.">和硝子とは別に、横田さんは書作品も制作できます。海外向けには単なるJapanese Calligraphyではなく、依頼者の人生、価値観、願いを聞き、横田さんが象徴する一文字を選んで制作する「Personal Kanji Portrait」として設計します。</p>
+  <div class="price">PERSONAL KANJI PORTRAIT — FROM US$1,500</div><a class="btn" href="#purchase" data-ja="オーダーについて相談する →" data-en="DISCUSS A COMMISSION →">オーダーについて相談する →</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head reveal"><h2><span class="gold">A journey.</span><br><span data-ja="京都から、世界へ。" data-en="From Kyoto to the world.">京都から、世界へ。</span></h2><p data-ja="海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。" data-en="International history should be presented not as a résumé, but as a journey of Japanese craft moving beyond Japan. In 2024, Yokota's works were also exhibited and sold online in Taipei, Taiwan.">海外販売では、都市名を単なる経歴一覧にせず、横田作品が日本の外へ渡ってきた物語として見せます。直近では2024年に台湾・台北でも展示・オンライン販売が行われました。</p></div>
+  <div class="journey reveal"><div class="city"><b>KYOTO</b><span>JAPAN / ORIGIN</span></div><div class="city"><b>NEW YORK</b><span>USA / EXHIBITION</span></div><div class="city"><b>AUSTIN</b><span>USA / EXHIBITION</span></div><div class="city"><b>PARIS · DUBAI</b><span>INTERNATIONAL</span></div></div>
+  <div class="taiwan reveal"><div class="media-unset" role="img" aria-label="台湾展示写真 未設定"><p class="media-note">画像未設定：台北展示（2024）の正式写真は、baes_データからの選定・差し替え待ちです。</p></div><div><div class="kicker">TAIPEI / 2024</div><h3 style="font-size:34px;font-weight:400;margin:12px 0" data-ja="リアル展示 × オンライン販売" data-en="Physical exhibition × Online sales">リアル展示 × オンライン販売</h3><p data-ja="台北市の店舗で実作品を展示し、QRコードから解説・オンライン購入へつなげるOMO型の販売も実施されています。この経験は、今後の海外サイトと現地展示を接続するモデルとして非常に相性が良いです。" data-en="In Taipei, physical display was connected to online information and purchasing through QR codes. This OMO approach is a strong model for connecting the new international website with future overseas exhibitions.">台北市の店舗で実作品を展示し、QRコードから解説・オンライン購入へつなげるOMO型の販売も実施されています。この経験は、今後の海外サイトと現地展示を接続するモデルとして非常に相性が良いです。</p></div></div>
+</div></section>
+
+
+<section class="collector"><div class="wrap">
+  <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、所有する。" data-en="From artwork to ownership.">作品を、所有する。</span></h2><p data-ja="高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。" data-en="High-value art becomes purchasable when material, dimensions, year, uniqueness, provenance and delivery are as clear as the photography. These cards demonstrate the route to detailed work pages.">高額作品は、写真だけでなく、素材・サイズ・制作年・一点物であること・来歴・配送条件まで見えて初めて「買える作品」になります。以下は作品詳細ページへの導線イメージです。</p></div>
+  <div class="works-preview reveal">
+    <article class="work-preview"><img src="assets/peacock-waglass.webp" alt="Waglass Peacock"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="葵孔雀" data-en="Peacock">葵孔雀</h3><p data-ja="作品ごとの物語、使用した着物・帯、光による表情の変化を記載。" data-en="A dedicated story explaining the textile, composition and how the work changes with light.">作品ごとの物語、使用した着物・帯、光による表情の変化を記載。</p><div class="wp-meta"><span>YEAR: TBD</span><span>SIZE: TBD</span><span>MATERIAL: TBD</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></article>
+    <article class="work-preview"><img src="assets/dragon-waglass-alt.webp" alt="Waglass Dragon"><div class="wp-copy"><div class="type">WAGLASS / SIGNATURE WORK</div><h3 data-ja="神龍" data-en="Divine Dragon">神龍</h3><p data-ja="完成作品には多角度写真、設置イメージ、真作証明、保険付き国際配送情報を付与。" data-en="Each work page should include multiple views, installation imagery, authenticity documentation and insured international shipping information.">完成作品には多角度写真、設置イメージ、真作証明、保険付き国際配送情報を付与。</p><div class="wp-meta"><span>YEAR: TBD</span><span>SIZE: TBD</span><span>MATERIAL: TBD</span><span>SHIPPING: WORLDWIDE</span></div><div class="wp-price">PRICE ON REQUEST</div></div></article>
+  </div>
+  <div class="assurance reveal">
+    <div class="assure"><div class="icon">壱</div><h3 data-ja="One of One" data-en="One of One">One of One</h3><p data-ja="一点物であることを明記し、作品番号を管理。" data-en="State uniqueness clearly and maintain a work identification number.">一点物であることを明記し、作品番号を管理。</p></div>
+    <div class="assure"><div class="icon">証</div><h3 data-ja="Authenticity" data-en="Authenticity">Authenticity</h3><p data-ja="署名・落款・真作証明書・作品来歴をセットにする。" data-en="Signature, seal, certificate of authenticity and provenance accompany the work.">署名・落款・真作証明書・作品来歴をセットにする。</p></div>
+    <div class="assure"><div class="icon">運</div><h3 data-ja="Worldwide Delivery" data-en="Worldwide Delivery">Worldwide Delivery</h3><p data-ja="梱包、保険、追跡、破損時対応を事前に明示。" data-en="Packaging, insurance, tracking and damage procedures are disclosed before purchase.">梱包、保険、追跡、破損時対応を事前に明示。</p></div>
+    <div class="assure"><div class="icon">相</div><h3 data-ja="Private Support" data-en="Private Support">Private Support</h3><p data-ja="高額作品は購入前のオンライン相談・設置相談を用意。" data-en="Collectors can arrange a private viewing or installation consultation before purchase.">高額作品は購入前のオンライン相談・設置相談を用意。</p></div>
+  </div>
+</div></section>
+
+<section id="purchase" class="purchase"><div class="wrap">
+  <div class="section-head reveal"><h2><span data-ja="鑑賞から、" data-en="From viewing,">鑑賞から、</span><br><span class="gold" data-ja="所有へ。" data-en="to ownership.">所有へ。</span></h2><p data-ja="「買う」ボタンだけでは、高額アートの心理には合いません。購入者の温度に合わせて3つの出口を用意します。" data-en="A single Buy button is not enough for high-value art. Three pathways match different levels of collector intent.">「買う」ボタンだけでは、高額アートの心理には合いません。購入者の温度に合わせて3つの出口を用意します。</p></div>
+  <div class="pathways reveal">
+    <a class="path"><div class="num">01 / COLLECT</div><h3>Available Works</h3><p data-ja="完成済みの和硝子・書作品。価格・サイズ・来歴・配送条件を確認して購入。" data-en="Completed Waglass and calligraphy works with price, size, provenance and shipping information.">完成済みの和硝子・書作品。価格・サイズ・来歴・配送条件を確認して購入。</p><div class="arrow">→</div></a>
+    <a class="path"><div class="num">02 / PERSONAL</div><h3>Private Commission</h3><p data-ja="人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初は相談予約へ。" data-en="One-of-a-kind work created from a personal story, family textile or corporate philosophy. Begin with a private consultation.">人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初は相談予約へ。</p><div class="arrow">→</div></a>
+    <a class="path"><div class="num">03 / SPACE</div><h3>Interior & Hospitality</h3><p data-ja="ホテル、邸宅、レストラン、企業、設計者向け。空間写真や図面をもとに大型作品を提案。" data-en="For hotels, residences, restaurants, companies and designers. Large-scale works proposed from plans and spatial context.">ホテル、邸宅、レストラン、企業、設計者向け。空間写真や図面をもとに大型作品を提案。</p><div class="arrow">→</div></a>
+  </div>
+</div></section>
+</main>
+
+<footer><span>CONCEPT SAMPLE / MITSUYASU YOKOTA</span><span>JP / EN · BLACK × GOLD × KYOTO PURPLE</span></footer>
+
+<script>
+const jp=document.getElementById('jp'), en=document.getElementById('en');
+function setLang(lang){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-ja]').forEach(el=>el.innerHTML=el.dataset[lang]);
+  jp.classList.toggle('active',lang==='ja'); en.classList.toggle('active',lang==='en');
+}
+jp.onclick=()=>setLang('ja'); en.onclick=()=>setLang('en');
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-innerHeight;
+  document.getElementById('progress').style.width=(scrollY/h*100)+'%';
+  const k=document.getElementById('kyotoImg');
+  if(k){const r=k.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) k.style.transform=`scale(1.08) translateY(${(innerHeight/2-r.top-r.height/2)*.025}px)`;}
+});
+</script>
+</body></html>
