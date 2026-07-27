@@ -33,10 +33,10 @@
 `js/contact-form.js` の先頭:
 
 ```js
-const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyc9kfnFczyooOCX_xhNnSTTUq1AnEiauu15q44dBPuY7AIc3VKmzyoZloa8CtWpqpc/exec';
+const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyzWkEP9Z6bMG-NT1_k_fC7PyueWCpXSVSjD_9vQiR_uICyn7ynBiJJQ9xqbSlwjZWy/exec';
 ```
 
-（2026-07-27 設定済み。空に戻すと送信時に「設定前です」と表示されます。）
+（2026-07-27 更新済み。空に戻すと送信時に「設定前です」と表示されます。）
 
 ## 4. 動作確認
 

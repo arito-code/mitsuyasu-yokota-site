@@ -5,7 +5,7 @@
  * Leave empty to show a setup message instead of sending.
  */
 (function () {
-  const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyc9kfnFczyooOCX_xhNnSTTUq1AnEiauu15q44dBPuY7AIc3VKmzyoZloa8CtWpqpc/exec';
+  const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyzWkEP9Z6bMG-NT1_k_fC7PyueWCpXSVSjD_9vQiR_uICyn7ynBiJJQ9xqbSlwjZWy/exec';
 
   const TYPE_ALIASES = {
     available: 'available',
