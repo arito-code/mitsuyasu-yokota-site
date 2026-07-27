@@ -97,7 +97,7 @@ Calligraphy 5–10作品
 - [ ] Nagoya Castle
 - [ ] Kabukiza
 - [ ] Tokyo Big Sight
-- [ ] Daikaku-ji Shinden（京都大覚寺・宸殿個展：年 / 正式展名 / 招待状）
+- [~] Daikaku-ji Shinden（京都大覚寺・宸殿個展：2014年2月本人確認済／正式展名・招待状は未）
 
 ## P2 — ブランド強化
 - [ ] 横田氏の署名をSVG化

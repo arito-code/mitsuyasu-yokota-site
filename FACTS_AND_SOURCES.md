@@ -77,7 +77,7 @@ Source folder: `baes_データ/横田満康_写真集（実績写真）/`
 | `AGORAgallery_アメリカ個展.jpg` | 30th Chelsea International Fine Art Competition, Honorable Mention, Agora Gallery |
 | `東京エレクトロンオースティン本社_個展.jpg` | Tokyo Electron America HQ exhibition poster; public opening 2015-11-16 |
 | `大阪芸大_最優秀賞.jpg` | Certificate content is **持田総章芸術賞** / Heart Art in KOBE 2019 (22nd AIDS Charity Art Exhibition), Excellent, 2019-07-13 — not Osaka University of Arts |
-| `京都大覚寺（国宝）_寝殿造り個展.jpg` | Waglass panels before peony fusuma — consistent with 宸殿「牡丹の間」 installation; year / formal title still TBD |
+| `京都大覚寺（国宝）_寝殿造り個展.jpg` | Waglass panels before peony fusuma — consistent with 宸殿「牡丹の間」. Artist-confirmed date: **February 2014**. Formal title / organizer still TBD |
 
 Site assets:
 - `assets/ny-consulate-patronage.webp`
@@ -103,7 +103,7 @@ Include after verifying the final press release URL and exact exhibition venue /
 - Paris exhibition: venue / year / organizer
 - Dubai exhibition: venue / year / organizer
 - Bangkok / China exhibitions: venue / year
-- Daikaku-ji Shinden solo exhibition: year / formal exhibition title / organizer (installation photo exists)
+- Daikaku-ji Shinden solo exhibition: formal exhibition title / organizer (date artist-confirmed as Feb 2014; installation photo exists)
 - Higashikuni-no-miya Cultural Award certificate / formal wording
 - Other museum selection records (Nikkokai, Kansai Niki, etc.)
 - Saudi-related broadcast / donation
