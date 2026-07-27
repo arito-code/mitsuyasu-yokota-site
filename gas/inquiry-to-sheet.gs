@@ -8,8 +8,9 @@
 
 var SPREADSHEET_ID = '1VC57n9-kO1y7wOdhDeR2Q0U0KxS9Va7k7Ud-OzBVhHI';
 var SHEET_NAME = '問い合わせ'; // change if your tab name differs
-var ENABLE_EMAIL_NOTIFY = false; // set true + NOTIFY_TO to receive mail
-var NOTIFY_TO = ''; // e.g. 'you@example.com'
+var ENABLE_EMAIL_NOTIFY = true;
+var NOTIFY_TO = 'info@g-knowthyself.com';
+var NOTIFY_CC = 'info@g-knowthyself.com, mituyasu100@gmail.com';
 
 var HEADERS = [
   '受信日時',
@@ -55,9 +56,10 @@ function doPost(e) {
     ]);
 
     if (ENABLE_EMAIL_NOTIFY && NOTIFY_TO) {
-      MailApp.sendEmail({
+      var mailOpts = {
         to: NOTIFY_TO,
         subject: '[Yokota Site] Inquiry: ' + (data.type || 'general') + ' / ' + (data.name || ''),
+        replyTo: String(data.email || ''),
         body:
           'Name: ' +
           data.name +
@@ -73,7 +75,9 @@ function doPost(e) {
           (data.message || '') +
           '\n\nPage: ' +
           (data.page || ''),
-      });
+      };
+      if (NOTIFY_CC) mailOpts.cc = NOTIFY_CC;
+      MailApp.sendEmail(mailOpts);
     }
 
     return json_({ ok: true });

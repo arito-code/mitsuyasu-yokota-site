@@ -44,16 +44,19 @@ const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyc9kfnFczyooOC
 2. スプシに行が増えることを確認
 3. コードを直したあとは、必ず **デプロイ → デプロイを管理 → 編集 → 新バージョン** で再公開
 
-## 5. メール通知（任意）
+## 5. メール通知
 
-GAS 内:
+GAS 内（設定済み）:
 
 ```js
 var ENABLE_EMAIL_NOTIFY = true;
-var NOTIFY_TO = 'you@example.com';
+var NOTIFY_TO = 'info@g-knowthyself.com';
+var NOTIFY_CC = 'info@g-knowthyself.com, mituyasu100@gmail.com';
 ```
 
-初回実行時にメール送信の承認ダイアログが出ます。
+問い合わせ受信時に上記へ通知メールが飛びます（Reply-To は送信者のメール）。  
+初回実行時にメール送信の承認ダイアログが出ます。  
+**このファイルを直したあとは、Apps Script 側へ貼り直して「新バージョン」で再デプロイが必要です。**
 
 ## 導線
 
