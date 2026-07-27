@@ -99,6 +99,7 @@ Calligraphy 5–10作品
 - [~] Tokyo Big Sight（2018.03／@Press＋ブース写真済／正式ブース名の最終確認は任意）
 - [~] Daikaku-ji Shinden（京都大覚寺・宸殿個展：2014年2月本人確認済／正式展名・招待状は未）
 - [~] Roppongi Hills 2018.07 + Yumi Katsura guest（写真済／正式展名・会場表記は未）
+- [~] Saudi royal donation 2018.05（写真済／相手方正式名・作品名は未）
 - [~] Leslie Kee collab 2024.09（写真済／正式会場・展名は未）
 - [~] Makoto Shinkai 20th ART EXHIBITION 2024.11（告知＋作品写真済／出展条件の最終文言は任意）
 

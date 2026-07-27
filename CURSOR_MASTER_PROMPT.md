@@ -7,7 +7,7 @@ Mitsuyasu Yokota / 横田満康
 Kyoto-based artist, architect and spatial designer.
 
 主な作品:
-1. Waglass（和硝子）: 京友禅・西陣織等の実物の伝統素材をガラスに封じ込めた作品
+1. Waglass（和硝子）: 京友禅・西陣織等の実物の伝統素材をガラスに封じ込めた作品。硝子として見る方向で表情が変わり、自然と融合し、背景を映して日本の四季（桜・紅葉など）を感じられる
 2. Calligraphy（書）: 既製作品およびPersonal Kanji Portraitの構想
 3. Spatial / Architectural commission: ホテル・邸宅・企業・飲食店等の空間向け大型作品
 

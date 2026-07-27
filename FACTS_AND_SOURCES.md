@@ -89,6 +89,8 @@ Source folder: `baes_データ/横田満康_写真集（実績写真）/`
 | `レスリーキー写真家コラボ.jpg` | Sept 2024 collaboration exhibition with photographer Leslie Kee; Waglass plates with Kee SUPER portraits (artist-provided) |
 | `新海誠_イベント.jpg` | Makoto Shinkai 20th ART EXHIBITION for『雲のむこう、約束の場所』, 2024-11-01–24 (event graphic) |
 | `新海誠_参考作品.jpg` | Waglass works associated with the Shinkai 20th exhibition (label in photo: 参考商品) |
+| `サウジアラビア殿下.JPG` | May 2018 presentation / handshake with Saudi Arabian royalty (artist-provided; formal name and work title TBD) |
+| `葛飾北斎.jpg` | Waglass recreation of Hokusai's Great Wave off Kanagawa (富岳三十六景「神奈川沖浪裏」); artist-stated: 260×380×10mm, 2024.2, handmade washi, gold outlining, 25 diamonds; sold at USD 20,000 |
 
 Site assets:
 - `assets/ny-consulate-patronage.webp`
@@ -106,6 +108,8 @@ Site assets:
 - `assets/shinkai-makoto-20th-event.webp`
 - `assets/shinkai-makoto-reference-works.webp` (from `新海誠_参考作品.jpg`)
 - `assets/shinkai-makoto-waglass-works.webp`
+- `assets/saudi-royal-donation.webp` (from `サウジアラビア殿下.JPG`)
+- `assets/katsushika-hokusai.webp` (from `葛飾北斎.jpg`) — work page: `works/katsushika-hokusai.html`; used as homepage hero
 
 ---
 
@@ -129,7 +133,7 @@ Assets: `taipei-solo-exhibition.webp`, `taipei-solo-exhibition-news.webp`.
 - Daikaku-ji Shinden solo exhibition: formal exhibition title / organizer (date artist-confirmed as Feb 2014; installation photo exists)
 - Higashikuni-no-miya Cultural Award certificate / formal wording
 - Other museum selection records (Nikkokai, Kansai Niki, etc.)
-- Saudi-related broadcast / donation
+- Saudi royal donation: formal name of the recipient / work title (May 2018 photo on site; avoid inventing titles)
 - Collector names or notable buyers
 - Any claimed sales numbers
 
