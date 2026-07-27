@@ -106,6 +106,35 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 .work-preview img{width:100%;height:360px;object-fit:cover}.wp-copy{padding:28px}.wp-copy .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:#c9a45d;text-transform:uppercase}.wp-copy h3{font-size:28px;font-weight:400;margin:15px 0}.wp-copy p{color:#918995;line-height:1.75;font-size:13px}.wp-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:25px 0;color:#bbb2bd;font:10px Arial,sans-serif;letter-spacing:.08em}.wp-price{font:18px Georgia,serif;color:#ead49d}
 @media(max-width:950px){.proof-inner,.process,.assurance{grid-template-columns:1fr 1fr}.works-preview,.work-preview{grid-template-columns:1fr}}
 @media(max-width:600px){.proof-inner,.process,.assurance{grid-template-columns:1fr}}
+
+.contact{background:radial-gradient(circle at 80% 10%,rgba(86,52,106,.16),transparent 34%),linear-gradient(180deg,#08070a,#050506)}
+.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:start;margin-top:10px}
+.contact-aside p{color:var(--muted);line-height:1.95;margin:0 0 22px;font-size:15px}
+.contact-aside .meta{font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.inquiry-form{border:1px solid var(--line);padding:36px 32px;background:linear-gradient(155deg,#100e14,#0c0b10)}
+.inquiry-form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.inquiry-form label{display:block;margin-bottom:16px}
+.inquiry-form label.full{grid-column:1/-1}
+.inquiry-form .lbl{display:block;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.inquiry-form input,.inquiry-form select,.inquiry-form textarea{
+  width:100%;background:rgba(5,5,7,.55);border:1px solid rgba(201,164,93,.28);color:var(--white);
+  padding:14px 14px;font:14px/1.5 "Yu Mincho","Hiragino Mincho ProN",Georgia,serif;outline:none;transition:border-color .25s,box-shadow .25s
+}
+.inquiry-form input:focus,.inquiry-form select:focus,.inquiry-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 1px rgba(201,164,93,.25)}
+.inquiry-form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 18px) 54%,calc(100% - 12px) 54%;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.inquiry-form textarea{min-height:140px;resize:vertical}
+.inquiry-form .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:8px 0 22px;color:#9f97a1;font-size:13px;line-height:1.7}
+.consent input{margin-top:4px;accent-color:var(--gold)}
+.inquiry-form .actions{margin-top:8px}
+.inquiry-form button.btn{cursor:pointer;background:transparent;color:var(--white)}
+.inquiry-form button.btn.primary{background:var(--gold);color:#090708;border-color:var(--gold)}
+.inquiry-form button.btn:disabled{opacity:.55;cursor:wait;transform:none;box-shadow:none}
+#inquiryStatus{margin-top:18px;padding:14px 16px;border:1px solid var(--line);font-size:13px;line-height:1.7;color:var(--gold2)}
+#inquiryStatus[data-kind="error"]{border-color:rgba(196,90,90,.45);color:#e7b4b4}
+#inquiryStatus[data-kind="ok"]{border-color:rgba(201,164,93,.55);color:var(--gold2)}
+#inquiryStatus[data-kind="pending"]{color:#c8bfcb}
+@media(max-width:950px){.contact-grid,.inquiry-form .row{grid-template-columns:1fr}.inquiry-form{padding:28px 22px}}
 </style>
 
 </head>
@@ -114,7 +143,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 <nav class="nav">
   <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="Waglass / 空間" data-en="Waglass / Space">Waglass / 空間</small></div>
   <div class="navlinks">
-    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
+    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a><a href="#contact">Contact</a>
     <span class="lang"><button id="jp" class="active">JP</button><button id="en">EN</button></span>
   </div>
 </nav>
@@ -189,7 +218,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
   <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、<br>所有する。" data-en="From artwork<br>to ownership.">作品を、<br>所有する。</span></h2><p data-ja="販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。実物をご覧になりたい方は、京都での拝見をご案内します。" data-en="Collecting is primarily online. Each work lists material, dimensions, year, provenance and shipping terms. To see pieces in person, we welcome you in Kyoto.">販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。実物をご覧になりたい方は、京都での拝見をご案内します。</p></div>
   <div class="works-preview reveal">
     <a class="work-preview" href="works/sousui.html" style="color:inherit;text-decoration:none"><img src="assets/sousui-1.webp" alt="Waglass Sousui"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3><p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif: woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p><div class="wp-meta"><span>YEAR: 2022</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>MOTIF: TSUJIGAHANA</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></a>
-    <article class="work-preview"><img src="assets/peacock-waglass.webp" alt="Waglass Peacock"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="葵孔雀" data-en="Peacock">葵孔雀</h3><p data-ja="使用した着物・帯の物語と、光によって移ろう表情を持つ一点物。" data-en="A one-of-one piece that carries the story of its kimono or obi, and changes with the light.">使用した着物・帯の物語と、光によって移ろう表情を持つ一点物。</p><div class="wp-meta"><span>YEAR: xxxx</span><span>SIZE: xxxx</span><span>MATERIAL: xxxx</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></article>
+    <a class="work-preview" href="works/kinouka-mai.html" style="color:inherit;text-decoration:none"><img src="assets/kinouka-mai.webp" alt="Waglass Kinouka Mai"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</h3><p data-ja="京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。" data-en="Golden sakura in Kyoto kinsai, with silver branches and bokashi dyeing.">京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。</p><div class="wp-meta"><span>YEAR: xxxx</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>MOTIF: SAKURA</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></a>
   </div>
   <div class="assurance reveal">
     <div class="assure"><div class="icon">壱</div><h3 data-ja="One of One" data-en="One of One">One of One</h3><p data-ja="すべての作品は一点物。固有の作品番号で管理されています。" data-en="Every work is one of one, with its own identification number.">すべての作品は一点物。固有の作品番号で管理されています。</p></div>
