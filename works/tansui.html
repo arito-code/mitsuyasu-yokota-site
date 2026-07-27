@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>蒼翠 / Sousui — Mitsuyasu Yokota</title>
-<meta name="description" content="和硝子「蒼翠」。江戸時代に伝わる辻が花文様をモチーフに、藤の花を金銀青緑の糸で織り、京金彩加工を施した作品。">
+<title>淡透 / Tansui — Mitsuyasu Yokota</title>
+<meta name="description" content="和硝子「淡透」。辻が花をモチーフに、地色の透明感と華が浮き出る技法、京友禅の最高技術で作られた作品。">
 <style>
 :root{
   --black:#070709; --black2:#0D0C10; --panel:#111015;
@@ -43,6 +43,8 @@ html[lang="en"] h1,html[lang="en"] h2{word-break:normal}
 .hero-visual{position:relative;min-height:720px;overflow:hidden;background:radial-gradient(circle at 55% 42%,rgba(86,52,106,.22),transparent 42%),#050507}
 .hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.04);animation:heroZoom 16s ease-in-out infinite alternate;filter:saturate(.92) contrast(1.05)}
 .hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(7,7,9,.55)),linear-gradient(180deg,transparent 70%,rgba(7,7,9,.75))}
+.hero-visual .media-unset{position:absolute;inset:0;min-height:100%;border:0;border-radius:0}
+.hero-visual:has(.media-unset):after{display:none}
 @keyframes heroZoom{from{transform:scale(1.02)}to{transform:scale(1.08)}}
 .hero-copy{padding:8vh 6vw 8vh 5vw;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 20% 30%,rgba(86,52,106,.16),transparent 40%),var(--black2);border-left:1px solid rgba(201,164,93,.12)}
 .crumb{font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f8793;margin-bottom:28px}
@@ -75,10 +77,10 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .detail-frame img{width:100%;height:100%;object-fit:cover;display:block;min-height:640px;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);filter:saturate(.9) contrast(1.04)}
 .detail-frame:hover img{transform:scale(1.04)}
 .detail-frame .cap{position:absolute;left:18px;bottom:18px;padding:9px 12px;background:rgba(5,5,7,.78);border:1px solid var(--line);font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold2);text-transform:uppercase}
-.dual{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.detail-frame .media-unset{min-height:640px;border:0}
+.dual{display:grid;grid-template-columns:1fr;gap:18px;max-width:920px}
 .dual figure{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);min-height:420px}
-.dual figure img{width:100%;height:100%;object-fit:cover;min-height:420px;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
-.dual figure:hover img{transform:scale(1.05)}
+.dual figure .media-unset{min-height:420px;border:0}
 .dual figcaption{position:absolute;left:18px;bottom:18px;right:18px;font:9px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
 .assurance{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .assure{border:1px solid var(--line);padding:26px 22px;min-height:190px;background:linear-gradient(145deg,#0c0b0f,#100e14)}
@@ -93,17 +95,18 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .cta-note{font:11px Arial,sans-serif;letter-spacing:.08em;color:#7f7782;line-height:1.7;margin-top:18px}
 .cta-side{position:relative;overflow:hidden;background:#050507}
 .cta-side img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.cta-side .media-unset{min-height:100%;border:0}
 .related{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .rel{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);background:#0c0b0f;overflow:hidden;min-height:220px;transition:.35s}
 .rel:hover{transform:translateY(-4px);background:rgba(86,52,106,.1)}
 .rel img{width:100%;height:100%;object-fit:cover;min-height:220px}
-.media-unset{position:relative;min-height:220px;background:linear-gradient(135deg,#141218,#0b0a0e);border:1px dashed rgba(201,164,93,.35);display:flex;align-items:center;justify-content:center;padding:20px}
-.media-unset .media-note{margin:0;padding:12px 14px;border:1px solid rgba(201,164,93,.35);background:rgba(5,5,7,.82);color:var(--gold2);font:11px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em}
 .rel div{padding:28px}
 .rel .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
 .rel h3{font-size:26px;font-weight:400;margin:14px 0 10px}
 .rel p{color:#918995;line-height:1.7;font-size:13px;margin:0}
 footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.media-unset{position:relative;min-height:420px;background:linear-gradient(135deg,#141218,#0b0a0e);border:1px dashed rgba(201,164,93,.35);display:flex;align-items:center;justify-content:center;padding:28px}
+.media-unset .media-note{max-width:420px;margin:0;padding:14px 16px;border:1px solid rgba(201,164,93,.35);background:rgba(5,5,7,.82);color:var(--gold2);font:12px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em}
 @media (max-width:980px){
   .nav{padding:16px 3vw;gap:10px}
   .brand{min-width:0}
@@ -112,12 +115,12 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   .navlinks>a:not(.nav-cta){display:none}
   .nav-cta{padding:8px 10px;letter-spacing:.08em}
   .lang{margin-left:0;flex-shrink:0}
-  .hero,.story-grid,.dual,.cta-inner,.related,.rel{grid-template-columns:1fr}
+  .hero,.story-grid,.cta-inner,.related,.rel{grid-template-columns:1fr}
   .hero-visual{min-height:62vh}
   .hero-copy{border-left:0;border-top:1px solid rgba(201,164,93,.12);padding:56px 6vw 70px}
   .specs,.assurance{grid-template-columns:1fr 1fr}
   .motif{grid-template-columns:1fr}
-  .detail-frame,.detail-frame img{min-height:460px}
+  .detail-frame,.detail-frame .media-unset{min-height:460px}
   .cta-side{min-height:320px}
 }
 @media (max-width:600px){.specs,.assurance{grid-template-columns:1fr}}
@@ -134,7 +137,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   <div class="navlinks">
     <a href="../index.html#waglass">Waglass</a>
     <a href="../index.html#purchase">Collect</a>
-    <a class="nav-cta" href="../index.html?type=work&amp;work=%E8%92%BC%E7%BF%A0#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
+    <a class="nav-cta" href="../index.html?type=work&amp;work=%E6%B7%A1%E9%80%8F#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
     <a href="../history.html">History</a>
     <span class="lang"><button id="jp">JP</button><button id="en" class="active">EN</button></span>
   </div>
@@ -142,20 +145,21 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <header class="hero">
   <div class="hero-visual">
-    <img src="../assets/sousui-1.webp" alt="和硝子 蒼翠 — 正面">
+    <div class="media-unset"><p class="media-note" data-ja="作品写真を追加予定（淡透 / 辻が花）" data-en="Work photography to be added (Tansui / Tsujigahana)">作品写真を追加予定（淡透 / 辻が花）</p></div>
   </div>
   <div class="hero-copy">
-    <div class="crumb"><a href="../index.html" data-ja="作品一覧" data-en="Works">作品一覧</a> / Waglass / <span data-ja="蒼翠" data-en="Sousui">蒼翠</span></div>
+    <div class="crumb"><a href="../index.html" data-ja="作品一覧" data-en="Works">作品一覧</a> / Waglass / <span data-ja="淡透" data-en="Tansui">淡透</span></div>
     <div class="kicker">WAGLASS / ONE OF ONE</div>
-    <h1 data-ja="蒼翠<em>SOUSUI</em>" data-en="Sousui<em>蒼翠</em>">蒼翠<em>SOUSUI</em></h1>
-    <p class="hero-lead" data-ja="江戸時代に伝わる辻が花文様を起点に、藤の花を金・銀・青緑の糸で織り、京金彩加工を施した和硝子。" data-en="A Waglass work inspired by Edo-period Tsujigahana patterning: wisteria woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">江戸時代に伝わる辻が花文様を起点に、藤の花を金・銀・青緑の糸で織り、京金彩加工を施した和硝子。</p>
+    <h1 data-ja="淡透<em>TANSUI / TSUJIGAHANA</em>" data-en="Tansui<em>淡透 / 辻が花</em>">淡透<em>TANSUI / TSUJIGAHANA</em></h1>
+    <p class="hero-lead" data-ja="透明感を持つ、辻が花をモチーフにした和硝子。地色の透明感と華が浮き出る技法、京友禅の最高の技術で作られた一点物です。" data-en="A Waglass work in a Tsujigahana motif, defined by transparency — flowers rising from a translucent ground, crafted with the highest techniques of Kyo-Yuzen.">透明感を持つ、辻が花をモチーフにした和硝子。地色の透明感と華が浮き出る技法、京友禅の最高の技術で作られた一点物です。</p>
     <div class="status-row">
-      <span class="pill" data-ja="在庫: 1" data-en="Stock: 1">在庫: 1</span>
+      <span class="pill" data-ja="Price on Request" data-en="Price on Request">Price on Request</span>
       <span class="pill">ONE OF ONE</span>
-      <span class="pill">Φ280mm</span>
+      <span class="pill" data-ja="辻が花" data-en="Tsujigahana">辻が花</span>
     </div>
+    <div class="price">Price on Request<small data-ja="価格・在庫はお問い合わせください" data-en="Inquire for price and availability">価格・在庫はお問い合わせください</small></div>
     <div class="actions">
-      <a class="btn primary" href="../index.html?type=work&amp;work=%E8%92%BC%E7%BF%A0#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
+      <a class="btn primary" href="../index.html?type=work&amp;work=%E6%B7%A1%E9%80%8F#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
       <a class="btn" href="#story" data-ja="物語を読む →" data-en="Read the story →">物語を読む →</a>
     </div>
   </div>
@@ -169,15 +173,15 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <h2 data-ja="作品情報。" data-en="The work.">作品情報。</h2>
     </div>
     <div class="specs reveal">
-      <div class="spec"><b>Title</b><span data-ja="蒼翠 / Sousui" data-en="Sousui / 蒼翠">蒼翠 / Sousui</span></div>
+      <div class="spec"><b>Title</b><span data-ja="淡透 / Tansui" data-en="Tansui / 淡透">淡透 / Tansui</span></div>
+      <div class="spec"><b>Motif</b><span data-ja="辻が花" data-en="Tsujigahana">辻が花</span></div>
       <div class="spec"><b>Category</b><span>Waglass</span></div>
-      <div class="spec"><b>Year</b><span>2022</span></div>
       <div class="spec"><b>Edition</b><span data-ja="一点物" data-en="One of One">一点物</span></div>
-      <div class="spec"><b>Material</b><span data-ja="伝統織物（辻が花文様）／金・銀・青緑糸／京金彩／硝子" data-en="Traditional textile (Tsujigahana motif) / gold, silver and blue-green threads / Kyoto kinsai / glass">伝統織物（辻が花文様）／金・銀・青緑糸／京金彩／硝子</span></div>
-      <div class="spec"><b>Motif</b><span data-ja="辻が花 · 藤" data-en="Tsujigahana / Wisteria">辻が花 · 藤</span></div>
-      <div class="spec"><b>Dimensions</b><span data-ja="Φ280mm／厚み 約10mm" data-en="Φ280mm / thickness approx. 10mm">Φ280mm／厚み 約10mm</span></div>
-      <div class="spec"><b>Stock</b><span data-ja="在庫 1" data-en="Stock: 1">在庫 1</span></div>
-      <div class="spec"><b>Certificate</b><span data-ja="真作証明書 あり" data-en="Certificate of Authenticity included">真作証明書 あり</span></div>
+      <div class="spec"><b>Material</b><span data-ja="京友禅（辻が花）／硝子" data-en="Kyo-Yuzen (Tsujigahana) / glass">京友禅（辻が花）／硝子</span></div>
+      <div class="spec"><b>Technique</b><span data-ja="地色の透明感と華が浮き出る技法" data-en="Translucent ground with flowers that rise from it">地色の透明感と華が浮き出る技法</span></div>
+      <div class="spec"><b>Year</b><span class="xxxx">xxxx</span></div>
+      <div class="spec"><b>Dimensions</b><span class="xxxx">xxxx</span></div>
+      <div class="spec"><b>Price</b><span>Price on Request</span></div>
     </div>
   </div>
 </section>
@@ -186,20 +190,20 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   <div class="wrap story-grid">
     <div class="story-copy reveal">
       <div class="kicker">THE STORY</div>
-      <h2 data-ja="藤の記憶を、<br><span class='gold'>光の円環へ。</span>" data-en="Wisteria memory,<br><span class='gold'>held in light.</span>">藤の記憶を、<br><span class="gold">光の円環へ。</span></h2>
-      <p data-ja="この作品のイメージは、江戸時代に伝わる辻が花文様にあります。染と絞りが織りなす、やわらかく、しかし確かな文様の気配を、現代の和硝子として立ち上げました。" data-en="This work takes its image from Tsujigahana patterning associated with the Edo period. Soft yet assured motifs of dyeing and resist are reborn as contemporary Waglass.">この作品のイメージは、江戸時代に伝わる辻が花文様にあります。染と絞りが織りなす、やわらかく、しかし確かな文様の気配を、現代の和硝子として立ち上げました。</p>
-      <p data-ja="画面の主役は藤の花。金・銀・青緑の糸で織られ、さらに京金彩加工を重ねることで、光の角度によって表情が移ろいます。暗い空間では金属糸が静かに浮かび、昼光の下では青緑が深みを増します。" data-en="Wisteria leads the composition. Woven in gold, silver and blue-green threads, then finished with Kyoto kinsai, the surface shifts with the light. Metallic threads rise quietly in darkness; blue-green deepens in daylight.">画面の主役は藤の花。金・銀・青緑の糸で織られ、さらに京金彩加工を重ねることで、光の角度によって表情が移ろいます。暗い空間では金属糸が静かに浮かび、昼光の下では青緑が深みを増します。</p>
-      <p data-ja="「蒼翠」という名は、青と緑が重なる色彩の奥行きを示します。伝統を模写するのではなく、本物の織と彩を硝子の中へ封じ、空間に残る一点として差し出しています。" data-en="The name Sousui speaks to the depth where blue and green meet. Rather than imitating tradition, the work preserves authentic weave and colour within glass, offered as a singular presence for contemporary space.">「蒼翠」という名は、青と緑が重なる色彩の奥行きを示します。伝統を模写するのではなく、本物の織と彩を硝子の中へ封じ、空間に残る一点として差し出しています。</p>
+      <h2 data-ja="透明の地に、<br><span class='gold'>華が浮かぶ。</span>" data-en="Flowers rising<br><span class='gold'>from translucent ground.</span>">透明の地に、<br><span class="gold">華が浮かぶ。</span></h2>
+      <p data-ja="この作品は、透明感を持つ、辻が花をモチーフにした作品です。地色そのものに透明感があり、そこから華が浮き出るように作られています。" data-en="This work takes a Tsujigahana motif and is defined by transparency. The ground itself holds a sense of clarity, from which the flowers appear to rise.">この作品は、透明感を持つ、辻が花をモチーフにした作品です。地色そのものに透明感があり、そこから華が浮き出るように作られています。</p>
+      <p data-ja="京友禅の最高の技術で作られた作品です。模様を模倣するのではなく、友禅が持つ染めの深度と、硝子の光が重なり合う一点物として立ち上がっています。" data-en="It is crafted with the highest techniques of Kyo-Yuzen. Rather than imitating a pattern, the depth of yuzen dyeing and the light of glass meet as a singular work.">京友禅の最高の技術で作られた作品です。模様を模倣するのではなく、友禅が持つ染めの深度と、硝子の光が重なり合う一点物として立ち上がっています。</p>
+      <p data-ja="「淡透」という名は、淡く透き通る地色の気配を示します。見る角度や光によって、華の立ち現れ方が静かに移ろいます。" data-en="The name Tansui speaks to a pale, translucent ground. As light and angle change, the flowers appear and recede with quiet variation.">「淡透」という名は、淡く透き通る地色の気配を示します。見る角度や光によって、華の立ち現れ方が静かに移ろいます。</p>
       <div class="motif">
-        <div><i>01 / PATTERN</i><h3 data-ja="辻が花文様" data-en="Tsujigahana">辻が花文様</h3><p data-ja="江戸に伝わる文様の記憶を起点に構成。" data-en="Composed from the memory of Edo-period patterning.">江戸に伝わる文様の記憶を起点に構成。</p></div>
-        <div><i>02 / THREAD</i><h3 data-ja="金銀青緑の糸" data-en="Gold / Silver / Blue-green">金銀青緑の糸</h3><p data-ja="藤の花を、光を受ける糸で織る。" data-en="Wisteria woven in light-catching threads.">藤の花を、光を受ける糸で織る。</p></div>
-        <div><i>03 / FINISH</i><h3 data-ja="京金彩加工" data-en="Kyoto Kinsai">京金彩加工</h3><p data-ja="金彩が文様に奥行きと気品を添える。" data-en="Kinsai adds depth and quiet luxury.">金彩が文様に奥行きと気品を添える。</p></div>
-        <div><i>04 / FORM</i><h3 data-ja="和硝子" data-en="Waglass">和硝子</h3><p data-ja="布の記憶を、硝子の中の現代作品へ。" data-en="Textile memory, transformed within glass.">布の記憶を、硝子の中の現代作品へ。</p></div>
+        <div><i>01 / MOTIF</i><h3 data-ja="辻が花" data-en="Tsujigahana">辻が花</h3><p data-ja="伝統の文様を、硝子の中の現代作品へ。" data-en="A traditional motif, held in contemporary glass.">伝統の文様を、硝子の中の現代作品へ。</p></div>
+        <div><i>02 / TRANSPARENCY</i><h3 data-ja="透明感" data-en="Transparency">透明感</h3><p data-ja="地色の透明感が、作品全体の気配を決める。" data-en="The translucent ground sets the work's atmosphere.">地色の透明感が、作品全体の気配を決める。</p></div>
+        <div><i>03 / TECHNIQUE</i><h3 data-ja="華が浮き出る" data-en="Flowers that rise">華が浮き出る</h3><p data-ja="地から華が立ち現れる技法で構成。" data-en="Composed so flowers emerge from the ground.">地から華が立ち現れる技法で構成。</p></div>
+        <div><i>04 / CRAFT</i><h3 data-ja="京友禅" data-en="Kyo-Yuzen">京友禅</h3><p data-ja="京友禅の最高技術を起点にした一点物。" data-en="A singular work begun in the highest Kyo-Yuzen craft.">京友禅の最高技術を起点にした一点物。</p></div>
       </div>
     </div>
     <div class="detail-frame reveal">
-      <img src="../assets/sousui-2.webp" alt="和硝子 蒼翠 — ディテール">
-      <div class="cap" data-ja="Detail / 藤と金彩" data-en="Detail / Wisteria and Kinsai">Detail / 藤と金彩</div>
+      <div class="media-unset"><p class="media-note" data-ja="ディテール写真を追加予定" data-en="Detail photography to be added">ディテール写真を追加予定</p></div>
+      <div class="cap" data-ja="Detail / 透明感と辻が花" data-en="Detail / Transparency & Tsujigahana">Detail / 透明感と辻が花</div>
     </div>
   </div>
 </section>
@@ -208,17 +212,13 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">GALLERY</div>
-      <h2 data-ja="光の中の、<br><span class='gold'>蒼翠。</span>" data-en="Sousui,<br><span class='gold'>in light.</span>">光の中の、<br><span class="gold">蒼翠。</span></h2>
-      <p data-ja="正面と斜めの二点で、円環の輪郭と、糸・金彩のきらめきをご覧ください。空間設置写真は xxxx。" data-en="Two views, frontal and angled, show the circular form and the shimmer of thread and kinsai. In-space photography: xxxx.">正面と斜めの二点で、円環の輪郭と、糸・金彩のきらめきをご覧ください。空間設置写真は xxxx。</p>
+      <h2 data-ja="光の中の、<br><span class='gold'>淡透。</span>" data-en="Tansui,<br><span class='gold'>in light.</span>">光の中の、<br><span class="gold">淡透。</span></h2>
+      <p data-ja="作品写真は今後追加予定です。正面・斜め・空間設置の各アングルを掲載します。" data-en="Work photography will be added. Frontal, angled and in-space views will be published here.">作品写真は今後追加予定です。正面・斜め・空間設置の各アングルを掲載します。</p>
     </div>
     <div class="dual reveal">
       <figure>
-        <img src="../assets/sousui-1.webp" alt="蒼翠 正面">
-        <figcaption>View 01 / Front</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/sousui-2.webp" alt="蒼翠 斜め">
-        <figcaption>View 02 / Angle</figcaption>
+        <div class="media-unset"><p class="media-note" data-ja="正面写真を追加予定" data-en="Front view to be added">正面写真を追加予定</p></div>
+        <figcaption>View 01 / Front · Coming soon</figcaption>
       </figure>
     </div>
   </div>
@@ -231,7 +231,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <h2 data-ja="所有のための、<br><span class='gold'>安心。</span>" data-en="Confidence<br><span class='gold'>to collect.</span>">所有のための、<br><span class="gold">安心。</span></h2>
     </div>
     <div class="assurance reveal">
-      <div class="assure"><div class="icon">01</div><h3>One of One</h3><p data-ja="固有の織と金彩を持つ一点物として制作されています。" data-en="Created as a singular work with its own weave and kinsai.">固有の織と金彩を持つ一点物として制作されています。</p></div>
+      <div class="assure"><div class="icon">01</div><h3>One of One</h3><p data-ja="透明感と辻が花の華を持つ一点物として制作されています。" data-en="Created as a singular work of translucent ground and Tsujigahana flowers.">透明感と辻が花の華を持つ一点物として制作されています。</p></div>
       <div class="assure"><div class="icon">02</div><h3 data-ja="真作証明" data-en="Authenticity">真作証明</h3><p data-ja="真作証明書あり。署名・落款の詳細は xxxx。" data-en="Certificate of Authenticity included. Signature and seal details: xxxx.">真作証明書あり。署名・落款の詳細は xxxx。</p></div>
       <div class="assure"><div class="icon">03</div><h3 data-ja="国際配送" data-en="Worldwide Shipping">国際配送</h3><p data-ja="京都発送。美術品梱包・保険付き国際配送: xxxx" data-en="Ships from Kyoto. Art packaging and insured worldwide shipping: xxxx">京都発送。美術品梱包・保険付き国際配送: xxxx</p></div>
       <div class="assure"><div class="icon">04</div><h3 data-ja="関税について" data-en="Customs">関税について</h3><p data-ja="輸入関税・VAT は到着国の規定により購入者負担となる場合があります。" data-en="Import duties and VAT may be payable by the buyer under local regulations.">輸入関税・VAT は到着国の規定により購入者負担となる場合があります。</p></div>
@@ -246,13 +246,13 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <h2 data-ja="この作品を、<br><span class='gold'>空間へ。</span>" data-en="Bring this work<br><span class='gold'>into your space.</span>">この作品を、<br><span class="gold">空間へ。</span></h2>
       <p data-ja="価格、在庫、設置のご相談をオンラインで承ります。" data-en="Inquire online about price, availability, or installation.">価格、在庫、設置のご相談をオンラインで承ります。</p>
       <div class="actions">
-        <a class="btn primary" href="../index.html?type=work&amp;work=%E8%92%BC%E7%BF%A0#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
+        <a class="btn primary" href="../index.html?type=work&amp;work=%E6%B7%A1%E9%80%8F#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
         <a class="btn" href="../index.html#waglass" data-ja="他の作品を見る →" data-en="View other works →">他の作品を見る →</a>
       </div>
-      <p class="cta-note">Shipping origin: Kyoto, Japan / Worldwide shipping: xxxx / Sample draft</p>
+      <p class="cta-note">Shipping origin: Kyoto, Japan / Worldwide shipping: xxxx / Price on Request</p>
     </div>
     <div class="cta-side">
-      <img src="../assets/sousui-2.webp" alt="蒼翠">
+      <div class="media-unset"><p class="media-note" data-ja="作品写真を追加予定" data-en="Work photography to be added">作品写真を追加予定</p></div>
     </div>
   </div>
 </section>
@@ -264,12 +264,12 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <h2 data-ja="あわせて見る。" data-en="You may also like.">あわせて見る。</h2>
     </div>
     <div class="related reveal">
-      <a class="rel" href="tansui.html">
-        <div class="media-unset" style="min-height:220px;border:0"><p class="media-note" data-ja="写真追加予定" data-en="Photo coming soon">写真追加予定</p></div>
+      <a class="rel" href="sousui.html">
+        <img src="../assets/sousui-1.webp" alt="蒼翠">
         <div>
           <div class="type">WAGLASS</div>
-          <h3 data-ja="淡透" data-en="Tansui">淡透</h3>
-          <p data-ja="辻が花をモチーフに、地色の透明感と華が浮き出る技法。" data-en="A Tsujigahana motif with translucent ground and flowers that rise from it.">辻が花をモチーフに、地色の透明感と華が浮き出る技法。</p>
+          <h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3>
+          <p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif, woven with gold, silver and blue-green threads.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p>
         </div>
       </a>
       <a class="rel" href="kinouka-mai.html">
