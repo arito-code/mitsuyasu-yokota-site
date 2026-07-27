@@ -79,8 +79,9 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .detail-frame .cap{position:absolute;left:18px;bottom:18px;padding:9px 12px;background:rgba(5,5,7,.78);border:1px solid var(--line);font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold2);text-transform:uppercase}
 .detail-frame .media-unset{min-height:640px;border:0}
 .dual{display:grid;grid-template-columns:1fr;gap:18px;max-width:920px}
-.dual figure{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);min-height:420px}
-.dual figure .media-unset{min-height:420px;border:0}
+.dual figure{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);min-height:520px}
+.dual figure img{width:100%;height:100%;object-fit:cover;object-position:center 48%;min-height:520px;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.dual figure:hover img{transform:scale(1.05)}
 .dual figcaption{position:absolute;left:18px;bottom:18px;right:18px;font:9px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
 .assurance{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .assure{border:1px solid var(--line);padding:26px 22px;min-height:190px;background:linear-gradient(145deg,#0c0b0f,#100e14)}
@@ -145,7 +146,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <header class="hero">
   <div class="hero-visual">
-    <div class="media-unset"><p class="media-note" data-ja="作品写真を追加予定（淡透 / 辻が花）" data-en="Work photography to be added (Tansui / Tsujigahana)">作品写真を追加予定（淡透 / 辻が花）</p></div>
+    <img src="../assets/tansui.webp" alt="和硝子 淡透 — 辻が花">
   </div>
   <div class="hero-copy">
     <div class="crumb"><a href="../index.html" data-ja="作品一覧" data-en="Works">作品一覧</a> / Waglass / <span data-ja="淡透" data-en="Tansui">淡透</span></div>
@@ -202,7 +203,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       </div>
     </div>
     <div class="detail-frame reveal">
-      <div class="media-unset"><p class="media-note" data-ja="ディテール写真を追加予定" data-en="Detail photography to be added">ディテール写真を追加予定</p></div>
+      <img src="../assets/tansui.webp" alt="和硝子 淡透 — ディテール">
       <div class="cap" data-ja="Detail / 透明感と辻が花" data-en="Detail / Transparency & Tsujigahana">Detail / 透明感と辻が花</div>
     </div>
   </div>
@@ -213,12 +214,12 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     <div class="section-head reveal">
       <div class="kicker">GALLERY</div>
       <h2 data-ja="光の中の、<br><span class='gold'>淡透。</span>" data-en="Tansui,<br><span class='gold'>in light.</span>">光の中の、<br><span class="gold">淡透。</span></h2>
-      <p data-ja="作品写真は今後追加予定です。正面・斜め・空間設置の各アングルを掲載します。" data-en="Work photography will be added. Frontal, angled and in-space views will be published here.">作品写真は今後追加予定です。正面・斜め・空間設置の各アングルを掲載します。</p>
+      <p data-ja="現在ご提供の写真は1点です。追加アングル・空間設置写真は今後追加予定です。" data-en="One photograph is currently available. Additional angles and in-space photography will be added.">現在ご提供の写真は1点です。追加アングル・空間設置写真は今後追加予定です。</p>
     </div>
     <div class="dual reveal">
       <figure>
-        <div class="media-unset"><p class="media-note" data-ja="正面写真を追加予定" data-en="Front view to be added">正面写真を追加予定</p></div>
-        <figcaption>View 01 / Front · Coming soon</figcaption>
+        <img src="../assets/tansui.webp" alt="淡透 正面">
+        <figcaption>View 01 / Front</figcaption>
       </figure>
     </div>
   </div>
@@ -252,7 +253,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <p class="cta-note">Shipping origin: Kyoto, Japan / Worldwide shipping: xxxx / Price on Request</p>
     </div>
     <div class="cta-side">
-      <div class="media-unset"><p class="media-note" data-ja="作品写真を追加予定" data-en="Work photography to be added">作品写真を追加予定</p></div>
+      <img src="../assets/tansui.webp" alt="淡透">
     </div>
   </div>
 </section>
