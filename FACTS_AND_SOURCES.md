@@ -81,6 +81,7 @@ Source folder: `baes_データ/横田満康_写真集（実績写真）/`
 | `NY個展.jpg` | Nippon Gallery at The Nippon Club, 2014-10-23–31, Consulate patronage stated on poster |
 | `AGORAgallery_アメリカ個展.jpg` | 30th Chelsea International Fine Art Competition, Honorable Mention, Agora Gallery |
 | `東京エレクトロンオースティン本社_個展.jpg` | Tokyo Electron America HQ exhibition poster; public opening 2015-11-16 |
+| `オースティンイベント.jpg` | Venue photo of the Austin public opening / gathering at Tokyo Electron America HQ (artist-provided) |
 | `大阪芸大_最優秀賞.jpg` | Certificate content is **持田総章芸術賞** / Heart Art in KOBE 2019 (22nd AIDS Charity Art Exhibition), Excellent, 2019-07-13 — not Osaka University of Arts |
 | `京都大覚寺（国宝）_寝殿造り個展.jpg` | Waglass panels before peony fusuma — consistent with 宸殿「牡丹の間」. Artist-confirmed date: **February 2014**. Formal title / organizer still TBD |
 | `桂由美ゲスト出演_個展.jpg` | July 2018 Roppongi Hills solo exhibition; bridal designer Yumi Katsura as guest speaker (artist-provided) |
@@ -94,6 +95,7 @@ Site assets:
 - `assets/ny-nippon-club-poster.webp`
 - `assets/agora-chelsea-honorable-mention.webp`
 - `assets/austin-tokyo-electron-poster.webp`
+- `assets/austin-tokyo-electron-event.webp` (from `オースティンイベント.jpg`)
 - `assets/mochida-art-award-2019.webp`
 - `assets/daikakuji-shinden-exhibition.webp` (from `京都大覚寺（国宝）_寝殿造り個展.jpg`)
 - `assets/roppongi-katsura-yumi-guest.webp`
