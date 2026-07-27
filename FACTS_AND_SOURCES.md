@@ -85,6 +85,7 @@ Site assets:
 - `assets/agora-chelsea-honorable-mention.webp`
 - `assets/austin-tokyo-electron-poster.webp`
 - `assets/mochida-art-award-2019.webp`
+- `assets/daikakuji-shinden-exhibition.webp` (from `京都大覚寺（国宝）_寝殿造り個展.jpg`)
 
 ---
 
