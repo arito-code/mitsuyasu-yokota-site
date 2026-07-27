@@ -22,7 +22,7 @@ background:linear-gradient(180deg,rgba(5,5,7,.9),rgba(5,5,7,.15));backdrop-filte
 .brand strong{display:block;font:500 16px/1.2 Georgia,serif;letter-spacing:.18em;color:var(--gold2)}
 .brand small{font:10px Arial,sans-serif;letter-spacing:.16em;color:#c8bfcb}
 .navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
-.nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s}
+.nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:var(--gold);color:#090708}
 .lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif}
@@ -102,7 +102,12 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .rel p{color:#918995;line-height:1.7;font-size:13px;margin:0}
 footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 @media (max-width:980px){
-  .navlinks>a{display:none}
+  .nav{padding:16px 3vw;gap:10px}
+  .brand strong{font-size:12px;letter-spacing:.1em}
+  .navlinks{gap:8px}
+  .navlinks>a:not(.nav-cta){display:none}
+  .nav-cta{padding:8px 10px;letter-spacing:.08em}
+  .lang{margin-left:0;flex-shrink:0}
   .hero,.story-grid,.dual,.cta-inner,.related,.rel{grid-template-columns:1fr}
   .hero-visual{min-height:62vh}
   .hero-copy{border-left:0;border-top:1px solid rgba(201,164,93,.12);padding:56px 6vw 70px}
