@@ -83,6 +83,11 @@ Source folder: `baes_データ/横田満康_写真集（実績写真）/`
 | `東京エレクトロンオースティン本社_個展.jpg` | Tokyo Electron America HQ exhibition poster; public opening 2015-11-16 |
 | `大阪芸大_最優秀賞.jpg` | Certificate content is **持田総章芸術賞** / Heart Art in KOBE 2019 (22nd AIDS Charity Art Exhibition), Excellent, 2019-07-13 — not Osaka University of Arts |
 | `京都大覚寺（国宝）_寝殿造り個展.jpg` | Waglass panels before peony fusuma — consistent with 宸殿「牡丹の間」. Artist-confirmed date: **February 2014**. Formal title / organizer still TBD |
+| `桂由美ゲスト出演_個展.jpg` | July 2018 Roppongi Hills solo exhibition; bridal designer Yumi Katsura as guest speaker (artist-provided) |
+| `東京ビックサイト_イベント.jpg` | Tokyo Big Sight booth for『空間の伝承』（2018.03; matches @Press). Filename uses ビック spelling |
+| `レスリーキー写真家コラボ.jpg` | Sept 2024 collaboration exhibition with photographer Leslie Kee; Waglass plates with Kee SUPER portraits (artist-provided) |
+| `新海誠_イベント.jpg` | Makoto Shinkai 20th ART EXHIBITION for『雲のむこう、約束の場所』, 2024-11-01–24 (event graphic) |
+| `新海誠_参考作品.jpg` | Waglass works associated with the Shinkai 20th exhibition (label in photo: 参考商品) |
 
 Site assets:
 - `assets/ny-consulate-patronage.webp`
@@ -91,6 +96,11 @@ Site assets:
 - `assets/austin-tokyo-electron-poster.webp`
 - `assets/mochida-art-award-2019.webp`
 - `assets/daikakuji-shinden-exhibition.webp` (from `京都大覚寺（国宝）_寝殿造り個展.jpg`)
+- `assets/roppongi-katsura-yumi-guest.webp`
+- `assets/tokyo-big-sight-exhibition.webp`
+- `assets/leslie-kee-collaboration.webp`
+- `assets/shinkai-makoto-20th-event.webp`
+- `assets/shinkai-makoto-waglass-works.webp`
 
 ---
 

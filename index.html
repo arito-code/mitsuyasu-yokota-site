@@ -21,8 +21,9 @@ background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filt
 .nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#090708}
 .lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
-.inquire-fab{position:fixed;right:22px;bottom:22px;z-index:60;padding:14px 18px;background:var(--gold);color:#090708;border:1px solid var(--gold);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s}
+.inquire-fab{position:fixed;right:22px;bottom:22px;z-index:60;padding:14px 18px;background:var(--gold);color:#090708;border:1px solid var(--gold);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s,opacity .3s}
 .inquire-fab:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(126,89,146,.28)}
+.inquire-fab.is-hidden{opacity:0;pointer-events:none;transform:translateY(8px)}
 @media(max-width:950px){.inquire-fab{right:14px;bottom:14px;padding:12px 14px}}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif} .lang .active{background:var(--gold);color:#0b0908}
 .hero{height:100vh;min-height:720px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
@@ -73,7 +74,7 @@ main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,1
 .path:hover{background:rgba(86,52,106,.12);transform:translateY(-6px)} .path .num{font:11px Arial,sans-serif;color:var(--gold);letter-spacing:.18em} .path h3{font-size:30px;font-weight:400;margin:50px 0 12px} .path p{color:#99919d;line-height:1.7;font-size:13px} .path .arrow{position:absolute;right:25px;bottom:24px;color:var(--gold);font-size:22px}
 footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 @media(max-width:950px){
-.navlinks>a{display:none}
+.navlinks>a:not(.nav-cta){display:none}
 .hero{min-height:640px}
 .hero-bg{background-image:linear-gradient(180deg,rgba(5,5,7,.18) 0%,rgba(5,5,7,.42) 55%,rgba(5,5,7,.78) 100%),linear-gradient(90deg,rgba(5,5,7,.55) 0%,rgba(5,5,7,.22) 52%,rgba(5,5,7,.05) 100%),linear-gradient(180deg,rgba(245,241,232,.08) 0%,rgba(245,241,232,.04) 50%,transparent 100%),url('assets/peacock-waglass.webp')}
 .hero-copy{padding:0 6vw 10vh;width:min(760px,92vw)}
@@ -240,6 +241,9 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 
 <section id="purchase" class="purchase"><div class="wrap">
   <div class="section-head reveal"><h2><span data-ja="オンラインで、" data-en="Online first,">オンラインで、</span><br><span class="gold" data-ja="所有へ。" data-en="to ownership.">所有へ。</span></h2><p data-ja="基本はオンライン販売です。ご購入前のご相談もオンラインで承ります。実物を見たい方は、京都での拝見をご案内します。" data-en="Sales are primarily online, including private consultation before purchase. To see works in person, we welcome you in Kyoto.">基本はオンライン販売です。ご購入前のご相談もオンラインで承ります。実物を見たい方は、京都での拝見をご案内します。</p></div>
+  <div class="actions reveal" style="margin:0 0 40px">
+    <a class="btn primary" href="#contact" data-ja="問い合わせる →" data-en="INQUIRE →">問い合わせる →</a>
+  </div>
   <div class="pathways reveal">
     <a class="path" href="?type=available#contact"><div class="num">01 / ONLINE</div><h3>Available Works</h3><p data-ja="完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。" data-en="Purchase completed Waglass works online, with price, size, provenance and shipping details.">完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。</p><div class="arrow">→</div></a>
     <a class="path" href="?type=commission#contact"><div class="num">02 / PERSONAL</div><h3>Private Commission</h3><p data-ja="人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。" data-en="One-of-a-kind work from a personal story, family textile or corporate philosophy. Begin with an online consultation.">人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。</p><div class="arrow">→</div></a>
@@ -298,6 +302,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 </main>
 
 <footer><span>© MITSUYASU YOKOTA</span><span>KYOTO, JAPAN</span></footer>
+<a class="inquire-fab" href="#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
 
 <script>
 const jp=document.getElementById('jp'), en=document.getElementById('en');
@@ -321,6 +326,11 @@ window.addEventListener('scroll',()=>{
   const k=document.getElementById('kyotoImg');
   if(k){const r=k.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) k.style.transform=`scale(1.08) translateY(${(innerHeight/2-r.top-r.height/2)*.025}px)`;}
 });
+const fab=document.querySelector('.inquire-fab');
+const contact=document.getElementById('contact');
+if(fab&&contact){
+  new IntersectionObserver(([e])=>fab.classList.toggle('is-hidden',e.isIntersecting),{threshold:.2}).observe(contact);
+}
 </script>
 <script src="js/contact-form.js"></script>
 </body></html>

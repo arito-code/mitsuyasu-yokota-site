@@ -7,7 +7,8 @@
 - Framer Motion for restrained transitions
 - next-intl for locale routing
 - Vercel or Cloudflare deployment
-- Resend / Formspree / server action for inquiry initially
+- Inquiry form (current static HTML): Google Apps Script → Spreadsheet (`CONTACT_FORM_SETUP.md`, `js/contact-form.js`, `gas/inquiry-to-sheet.gs`)
+- Future Next.js: Resend / Formspree / server action may replace GAS if needed
 - Stripe for direct-payment works if approved
 - Wise may be used for B2B invoices / transfers, not as the only consumer checkout
 

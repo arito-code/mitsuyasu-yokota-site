@@ -19,6 +19,7 @@
 4. `FACTS_AND_SOURCES.md`
 5. `CONTENT_CHECKLIST.md`
 6. `IMPLEMENTATION.md`
+7. `CONTACT_FORM_SETUP.md`（問い合わせ → スプシ連携）
 
 ## 参考HTML
 - `homepage_reference_final.html`

@@ -22,6 +22,8 @@ background:linear-gradient(180deg,rgba(5,5,7,.9),rgba(5,5,7,.15));backdrop-filte
 .brand strong{display:block;font:500 16px/1.2 Georgia,serif;letter-spacing:.18em;color:var(--gold2)}
 .brand small{font:10px Arial,sans-serif;letter-spacing:.16em;color:#c8bfcb}
 .navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
+.nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s}
+.nav-cta:hover{background:var(--gold);color:#090708}
 .lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif}
 .lang .active{background:var(--gold);color:#0b0908}
@@ -124,6 +126,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
     <a href="../index.html#waglass">Waglass</a>
     <a href="../index.html#purchase">Collect</a>
     <a href="../history.html">History</a>
+    <a class="nav-cta" href="../index.html?type=work&amp;work=%E9%87%91%E6%A1%9C%E8%8F%AF%E8%88%9E#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
     <span class="lang"><button id="jp" class="active">JP</button><button id="en">EN</button></span>
   </div>
 </nav>
@@ -143,7 +146,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
       <span class="pill">Φ230×10mm</span>
     </div>
     <div class="actions">
-      <a class="btn primary" href="#inquire" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
+      <a class="btn primary" href="../index.html?type=work&amp;work=%E9%87%91%E6%A1%9C%E8%8F%AF%E8%88%9E#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
       <a class="btn" href="#story" data-ja="物語を読む →" data-en="Read the story →">物語を読む →</a>
     </div>
   </div>
@@ -232,9 +235,9 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
     <div class="cta-copy reveal">
       <div class="kicker">PRIVATE INQUIRY</div>
       <h2 data-ja="この作品を、<br><span class='gold'>空間へ。</span>" data-en="Bring this work<br><span class='gold'>into your space.</span>">この作品を、<br><span class="gold">空間へ。</span></h2>
-      <p data-ja="京都での拝見、設置のご相談をオンラインで承ります。フォーム接続: xxxx" data-en="Inquire online about Kyoto viewing or installation. Form connection: xxxx">京都での拝見、設置のご相談をオンラインで承ります。フォーム接続: xxxx</p>
+      <p data-ja="価格、在庫、京都での拝見、設置のご相談をオンラインで承ります。" data-en="Inquire online about price, availability, Kyoto viewing, or installation.">価格、在庫、京都での拝見、設置のご相談をオンラインで承ります。</p>
       <div class="actions">
-        <a class="btn primary" href="../index.html#purchase" data-ja="問い合わせへ進む →" data-en="Continue to inquiry →">問い合わせへ進む →</a>
+        <a class="btn primary" href="../index.html?type=work&amp;work=%E9%87%91%E6%A1%9C%E8%8F%AF%E8%88%9E#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
         <a class="btn" href="../index.html#waglass" data-ja="他の作品を見る →" data-en="View other works →">他の作品を見る →</a>
       </div>
       <p class="cta-note">Shipping origin: Kyoto, Japan / Worldwide shipping: xxxx / Sample draft</p>
