@@ -101,7 +101,10 @@ Site assets:
 - `assets/roppongi-katsura-yumi-guest.webp`
 - `assets/tokyo-big-sight-exhibition.webp`
 - `assets/leslie-kee-collaboration.webp`
+- `assets/taipei-solo-exhibition.webp` (from `台北個展.jpg`)
+- `assets/taipei-solo-exhibition-news.webp` (from `台北個展_新聞.jpg`)
 - `assets/shinkai-makoto-20th-event.webp`
+- `assets/shinkai-makoto-reference-works.webp` (from `新海誠_参考作品.jpg`)
 - `assets/shinkai-makoto-waglass-works.webp`
 
 ---
@@ -109,8 +112,10 @@ Site assets:
 ## SOURCE-BACKED BUT USE CAREFULLY
 Company press releases can verify that the organizer publicly announced the event, but are not the same as independent art criticism.
 
-Taipei 2024:
-Include after verifying the final press release URL and exact exhibition venue / dates in project documents.
+Taipei 2024 (solo exhibition 『和硝子の世界』):
+Venue: WUZ屋子台北未來店 (Da'an, Taipei). Dates on flyer: 2024.05.08–07.05.
+Press: Commercial Times (工商時報) 2024.05.08 screenshot on site.
+Assets: `taipei-solo-exhibition.webp`, `taipei-solo-exhibition-news.webp`.
 
 ---
 
