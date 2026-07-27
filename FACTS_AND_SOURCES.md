@@ -53,11 +53,29 @@ Supports:
 
 ---
 
+## ARTIST DOCUMENTS ADDED 2026-07-27
+
+Source folder: `baes_データ/横田満康_写真集（実績写真）/`
+
+| File | Supports |
+| --- | --- |
+| `在ニューヨーク領事館.jpg` | Consulate General of Japan in New York patronage permission, 2014-09-19, for『着物ガラスアート 和硝子の世界』 |
+| `NY個展.jpg` | Nippon Gallery at The Nippon Club, 2014-10-23–31, Consulate patronage stated on poster |
+| `AGORAgallery_アメリカ個展.jpg` | 30th Chelsea International Fine Art Competition, Honorable Mention, Agora Gallery |
+| `東京エレクトロンオースティン本社_個展.jpg` | Tokyo Electron America HQ exhibition poster; public opening 2015-11-16 |
+| `大阪芸大_最優秀賞.jpg` | Certificate content is **持田総章芸術賞** / Heart Art in KOBE 2019 (22nd AIDS Charity Art Exhibition), Excellent, 2019-07-13 — not Osaka University of Arts |
+
+Site assets:
+- `assets/ny-consulate-patronage.webp`
+- `assets/ny-nippon-club-poster.webp`
+- `assets/agora-chelsea-honorable-mention.webp`
+- `assets/austin-tokyo-electron-poster.webp`
+- `assets/mochida-art-award-2019.webp`
+
+---
+
 ## SOURCE-BACKED BUT USE CAREFULLY
 Company press releases can verify that the organizer publicly announced the event, but are not the same as independent art criticism.
-
-New York / Austin:
-Use exact venue/year only after checking the original event record, invitation, gallery archive or artist documents.
 
 Taipei 2024:
 Include after verifying the final press release URL and exact exhibition venue / dates in project documents.
@@ -71,10 +89,9 @@ Include after verifying the final press release URL and exact exhibition venue /
 - Paris exhibition: venue / year / organizer
 - Dubai exhibition: venue / year / organizer
 - Bangkok / China exhibitions: venue / year
-- Awards and museum selection records
+- Higashikuni-no-miya Cultural Award certificate / formal wording
+- Other museum selection records (Nikkokai, Kansai Niki, etc.)
 - Saudi-related broadcast / donation
-- New York exhibition count
-- Chelsea competition award category/year
 - Collector names or notable buyers
 - Any claimed sales numbers
 
