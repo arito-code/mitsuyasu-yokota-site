@@ -25,6 +25,11 @@ Supports:
 Important:
 This verifies the 2017 installation/display. It does NOT alone prove that the same display is still present in 2026.
 
+Artist photo used on site (2026-07-27):
+- Source: `baes_データ/横田満康_写真集（実績写真）/京都駅_八条口.HEIC`
+- Site assets: `assets/kyoto-station.jpg` / `assets/kyoto-station.webp`
+- Shows the eight pillar-display niches at Kyoto Station Hachijo Exit.
+
 ### Nagoya Castle Honmaru Palace — 2017
 https://www.atpress.ne.jp/news/125379
 
