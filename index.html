@@ -18,7 +18,12 @@ a{color:inherit;text-decoration:none} button{font:inherit}
 background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filter:blur(10px)}
 .brand strong{display:block;font:500 16px/1.2 Georgia,serif;letter-spacing:.18em;color:var(--gold2)} .brand small{font:10px Arial,sans-serif;letter-spacing:.16em;color:#c8bfcb}
 .navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
+.nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s}
+.nav-cta:hover{background:var(--gold);color:#090708}
 .lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
+.inquire-fab{position:fixed;right:22px;bottom:22px;z-index:60;padding:14px 18px;background:var(--gold);color:#090708;border:1px solid var(--gold);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s}
+.inquire-fab:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(126,89,146,.28)}
+@media(max-width:950px){.inquire-fab{right:14px;bottom:14px;padding:12px 14px}}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif} .lang .active{background:var(--gold);color:#0b0908}
 .hero{height:100vh;min-height:720px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:-5%;background-image:linear-gradient(90deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.72) 34%,rgba(5,5,7,.08) 72%),url('assets/peacock-waglass.webp');
@@ -143,7 +148,8 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 <nav class="nav">
   <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="Waglass / 空間" data-en="Waglass / Space">Waglass / 空間</small></div>
   <div class="navlinks">
-    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a><a href="#contact">Contact</a>
+    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
+    <a class="nav-cta" href="#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
     <span class="lang"><button id="jp" class="active">JP</button><button id="en">EN</button></span>
   </div>
 </nav>
@@ -154,7 +160,11 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
     <div class="kicker" data-ja="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER" data-en="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER">KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER</div>
     <h1 data-ja="日本の記憶を、<br><em>光の中へ。</em>" data-en="Preserving<br><em>Japanese Memory.</em>">日本の記憶を、<br><em>光の中へ。</em></h1>
     <p data-ja="京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。実物をご覧になりたい方は、京都でお楽しみください。" data-en="Waglass encases the memory of Kyo-Yuzen kimono and Nishijin textiles within glass. Mitsuyasu Yokota transforms Japanese heritage into works made to live again in contemporary spaces. Works are available for online purchase. To see them in person, visit Kyoto.">京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。実物をご覧になりたい方は、京都でお楽しみください。</p>
-    <div class="actions"><a class="btn primary" href="#waglass" data-ja="作品を見る →" data-en="AVAILABLE WORKS →">作品を見る →</a><a class="btn" href="#purchase" data-ja="プライベートオーダー →" data-en="PRIVATE COMMISSION →">プライベートオーダー →</a></div>
+    <div class="actions">
+      <a class="btn primary" href="#waglass" data-ja="作品を見る →" data-en="AVAILABLE WORKS →">作品を見る →</a>
+      <a class="btn" href="?type=commission#contact" data-ja="プライベートオーダー →" data-en="PRIVATE COMMISSION →">プライベートオーダー →</a>
+      <a class="btn" href="#contact" data-ja="問い合わせる →" data-en="INQUIRE →">問い合わせる →</a>
+    </div>
   </div>
   <div class="scroll">SCROLL</div>
 </header>
@@ -217,8 +227,8 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 <section class="collector"><div class="wrap">
   <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、<br>所有する。" data-en="From artwork<br>to ownership.">作品を、<br>所有する。</span></h2><p data-ja="販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。実物をご覧になりたい方は、京都での拝見をご案内します。" data-en="Collecting is primarily online. Each work lists material, dimensions, year, provenance and shipping terms. To see pieces in person, we welcome you in Kyoto.">販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。実物をご覧になりたい方は、京都での拝見をご案内します。</p></div>
   <div class="works-preview reveal">
-    <a class="work-preview" href="works/sousui.html" style="color:inherit;text-decoration:none"><img src="assets/sousui-1.webp" alt="Waglass Sousui"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3><p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif: woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p><div class="wp-meta"><span>YEAR: 2022</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>MOTIF: TSUJIGAHANA</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></a>
-    <a class="work-preview" href="works/kinouka-mai.html" style="color:inherit;text-decoration:none"><img src="assets/kinouka-mai.webp" alt="Waglass Kinouka Mai"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</h3><p data-ja="京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。" data-en="Golden sakura in Kyoto kinsai, with silver branches and bokashi dyeing.">京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。</p><div class="wp-meta"><span>YEAR: xxxx</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>MOTIF: SAKURA</span><span>COA: INCLUDED</span></div><div class="wp-price">PRICE ON REQUEST</div></div></a>
+    <a class="work-preview" href="works/sousui.html" style="color:inherit;text-decoration:none"><img src="assets/sousui-1.webp" alt="Waglass Sousui"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3><p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif: woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p><div class="wp-meta"><span>YEAR: 2022</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
+    <a class="work-preview" href="works/kinouka-mai.html" style="color:inherit;text-decoration:none"><img src="assets/kinouka-mai.webp" alt="Waglass Kinouka Mai"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</h3><p data-ja="京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。" data-en="Golden sakura in Kyoto kinsai, with silver branches and bokashi dyeing.">京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。</p><div class="wp-meta"><span>YEAR: 2019</span><span>SIZE: Φ230×10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
   </div>
   <div class="assurance reveal">
     <div class="assure"><div class="icon">壱</div><h3 data-ja="One of One" data-en="One of One">One of One</h3><p data-ja="すべての作品は一点物。固有の作品番号で管理されています。" data-en="Every work is one of one, with its own identification number.">すべての作品は一点物。固有の作品番号で管理されています。</p></div>
@@ -231,9 +241,58 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 <section id="purchase" class="purchase"><div class="wrap">
   <div class="section-head reveal"><h2><span data-ja="オンラインで、" data-en="Online first,">オンラインで、</span><br><span class="gold" data-ja="所有へ。" data-en="to ownership.">所有へ。</span></h2><p data-ja="基本はオンライン販売です。ご購入前のご相談もオンラインで承ります。実物を見たい方は、京都での拝見をご案内します。" data-en="Sales are primarily online, including private consultation before purchase. To see works in person, we welcome you in Kyoto.">基本はオンライン販売です。ご購入前のご相談もオンラインで承ります。実物を見たい方は、京都での拝見をご案内します。</p></div>
   <div class="pathways reveal">
-    <a class="path"><div class="num">01 / ONLINE</div><h3>Available Works</h3><p data-ja="完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。" data-en="Purchase completed Waglass works online, with price, size, provenance and shipping details.">完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。</p><div class="arrow">→</div></a>
-    <a class="path"><div class="num">02 / PERSONAL</div><h3>Private Commission</h3><p data-ja="人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。" data-en="One-of-a-kind work from a personal story, family textile or corporate philosophy. Begin with an online consultation.">人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。</p><div class="arrow">→</div></a>
-    <a class="path" href="#kyoto"><div class="num">03 / KYOTO</div><h3>View in Kyoto</h3><p data-ja="実物をご覧になりたい方へ。京都駅をはじめ、京都での拝見をご案内します。" data-en="For those who wish to see the works in person — we guide viewing opportunities in Kyoto.">実物をご覧になりたい方へ。京都駅をはじめ、京都での拝見をご案内します。</p><div class="arrow">→</div></a>
+    <a class="path" href="?type=available#contact"><div class="num">01 / ONLINE</div><h3>Available Works</h3><p data-ja="完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。" data-en="Purchase completed Waglass works online, with price, size, provenance and shipping details.">完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。</p><div class="arrow">→</div></a>
+    <a class="path" href="?type=commission#contact"><div class="num">02 / PERSONAL</div><h3>Private Commission</h3><p data-ja="人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。" data-en="One-of-a-kind work from a personal story, family textile or corporate philosophy. Begin with an online consultation.">人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。</p><div class="arrow">→</div></a>
+    <a class="path" href="?type=kyoto#contact"><div class="num">03 / KYOTO</div><h3>View in Kyoto</h3><p data-ja="実物をご覧になりたい方へ。京都駅をはじめ、京都での拝見をご案内します。" data-en="For those who wish to see the works in person — we guide viewing opportunities in Kyoto.">実物をご覧になりたい方へ。京都駅をはじめ、京都での拝見をご案内します。</p><div class="arrow">→</div></a>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="section-head reveal">
+    <h2><span data-ja="プライベートな" data-en="A private">プライベートな</span><br><span class="gold" data-ja="対話から。" data-en="conversation.">対話から。</span></h2>
+    <p data-ja="作品のご購入、オーダー、京都での拝見、空間提案、プレス・ギャラリーのご相談をオンラインで承ります。送信内容は担当が確認のうえご返信します。" data-en="Inquire online about collecting works, commissions, Kyoto viewing, spatial projects, press, or gallery collaboration. Our team will review your message and respond.">作品のご購入、オーダー、京都での拝見、空間提案、プレス・ギャラリーのご相談をオンラインで承ります。送信内容は担当が確認のうえご返信します。</p>
+  </div>
+  <div class="contact-grid reveal">
+    <aside class="contact-aside">
+      <div class="meta">KYOTO / ONLINE FIRST</div>
+      <p data-ja="基本はオンラインでのご相談です。実物をご覧になりたい方には、京都での拝見をご案内します。高額作品のため、まずはご希望を詳しくお知らせください。" data-en="Consultation begins online. For those who wish to see works in person, we can arrange viewing in Kyoto. Please share your interest in detail.">基本はオンラインでのご相談です。実物をご覧になりたい方には、京都での拝見をご案内します。高額作品のため、まずはご希望を詳しくお知らせください。</p>
+      <p data-ja="送信後、スプレッドシートに記録されます。公開用メールアドレスはサイト上に掲載しません。" data-en="Submissions are logged to our spreadsheet. We do not publish a public inbox address on the site.">送信後、スプレッドシートに記録されます。公開用メールアドレスはサイト上に掲載しません。</p>
+    </aside>
+    <form id="inquiryForm" class="inquiry-form" novalidate>
+      <div class="hp" aria-hidden="true">
+        <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="row">
+        <label><span class="lbl" data-ja="お名前 *" data-en="Name *">お名前 *</span><input type="text" name="name" required autocomplete="name"></label>
+        <label><span class="lbl" data-ja="メール *" data-en="Email *">メール *</span><input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <div class="row">
+        <label><span class="lbl" data-ja="国 / 地域" data-en="Country / Region">国 / 地域</span><input type="text" name="country" autocomplete="country-name"></label>
+        <label>
+          <span class="lbl" data-ja="種別 *" data-en="Inquiry type *">種別 *</span>
+          <select name="type" required>
+            <option value="available" data-ja="作品購入 / Available Works" data-en="Available Works">作品購入 / Available Works</option>
+            <option value="commission" data-ja="プライベートオーダー" data-en="Private Commission">プライベートオーダー</option>
+            <option value="work" data-ja="特定作品について" data-en="About a specific work">特定作品について</option>
+            <option value="kyoto" data-ja="京都での拝見" data-en="View in Kyoto">京都での拝見</option>
+            <option value="interior" data-ja="空間 / インテリア" data-en="Interior / Hospitality">空間 / インテリア</option>
+            <option value="press" data-ja="プレス" data-en="Press">プレス</option>
+            <option value="gallery" data-ja="ギャラリー" data-en="Gallery">ギャラリー</option>
+            <option value="general" data-ja="その他" data-en="General">その他</option>
+          </select>
+        </label>
+      </div>
+      <label class="full"><span class="lbl" data-ja="作品名 / 件名" data-en="Work / Subject">作品名 / 件名</span><input type="text" name="work" autocomplete="off"></label>
+      <label class="full"><span class="lbl" data-ja="メッセージ *" data-en="Message *">メッセージ *</span><textarea name="message" required></textarea></label>
+      <label class="consent">
+        <input type="checkbox" name="privacy" required>
+        <span data-ja="送信内容が問い合わせ対応のために記録・利用されることに同意します。*" data-en="I agree that my inquiry may be recorded and used to respond to this request. *">送信内容が問い合わせ対応のために記録・利用されることに同意します。*</span>
+      </label>
+      <div class="actions">
+        <button type="submit" class="btn primary" data-ja="送信する →" data-en="Send inquiry →">送信する →</button>
+      </div>
+      <div id="inquiryStatus" hidden role="status" aria-live="polite"></div>
+    </form>
   </div>
 </div></section>
 </main>
@@ -245,6 +304,10 @@ const jp=document.getElementById('jp'), en=document.getElementById('en');
 function setLang(lang){
   document.documentElement.lang=lang;
   document.querySelectorAll('[data-ja]').forEach(el=>{
+    if(el.tagName==='OPTION'){
+      el.textContent=el.getAttribute('data-'+lang)||'';
+      return;
+    }
     el.innerHTML=el.getAttribute('data-'+lang)||'';
   });
   jp.classList.toggle('active',lang==='ja'); en.classList.toggle('active',lang==='en');
@@ -259,4 +322,5 @@ window.addEventListener('scroll',()=>{
   if(k){const r=k.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) k.style.transform=`scale(1.08) translateY(${(innerHeight/2-r.top-r.height/2)*.025}px)`;}
 });
 </script>
+<script src="js/contact-form.js"></script>
 </body></html>
