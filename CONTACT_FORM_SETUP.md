@@ -65,7 +65,6 @@ var NOTIFY_CC = 'info@g-knowthyself.com, mituyasu100@gmail.com';
 | トップ Collect セクション | `#contact` |
 | Available Works | `?type=available#contact` |
 | Private Commission | `?type=commission#contact` |
-| View in Kyoto | `?type=kyoto#contact` |
 | 作品ページ（蒼翠） | `../index.html?type=work&work=蒼翠#contact` |
 
 ## 注意

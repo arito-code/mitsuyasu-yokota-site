@@ -10,7 +10,6 @@
   const TYPE_ALIASES = {
     available: 'available',
     commission: 'commission',
-    kyoto: 'kyoto',
     work: 'work',
     press: 'press',
     gallery: 'gallery',
@@ -18,6 +17,7 @@
     general: 'general',
     purchase: 'available',
     inquire: 'work',
+    kyoto: 'general', // legacy link
   };
 
   function lang() {
