@@ -10,7 +10,7 @@
   --gold:#c9a45d; --gold2:#ead49d; --purple:#56346a; --purple2:#7d5a91;
   --white:#f5f1e8; --muted:#a9a2ab; --line:rgba(201,164,93,.28);
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
+*{box-sizing:border-box} html{scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;background:var(--black);color:var(--white);font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none} button{font:inherit}
 #progress{position:fixed;left:0;top:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--purple2));width:0;z-index:100}
@@ -36,10 +36,10 @@ background-size:cover;background-position:center 42%;transform:scale(1.06);anima
 .hero h1{margin:0;font-weight:400;font-size:clamp(54px,8.2vw,122px);line-height:.84;letter-spacing:-.055em}
 .hero h1 em{font-style:normal;color:var(--gold2)} .hero p{max-width:640px;color:#d1cad2;line-height:1.95;font-size:15px;margin:30px 0}
 /* JP: English display tracking/breaks pull Japanese awkwardly */
-html[lang="ja"] h1,html[lang="ja"] h2{letter-spacing:.04em;line-height:1.2;word-break:keep-all;line-break:strict;overflow-wrap:normal}
+html[lang="ja"] h1,html[lang="ja"] h2{letter-spacing:.04em;line-height:1.2;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 html[lang="ja"] .hero h1{letter-spacing:.06em;line-height:1.18}
 html[lang="en"] h1,html[lang="en"] h2{word-break:normal;line-break:auto}
-.actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;gap:30px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s}
+.actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;gap:30px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s;max-width:100%}
 .btn.primary{background:var(--gold);color:#090708} .btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(126,89,146,.2);border-color:var(--gold)}
 .scroll{position:absolute;right:4vw;bottom:8vh;z-index:4;font:9px Arial,sans-serif;letter-spacing:.22em;writing-mode:vertical-rl;color:#b9afb8}
 main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,164,93,.12)} .wrap{max-width:1420px;margin:auto}
@@ -72,9 +72,10 @@ main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,1
 .taiwan{margin-top:26px;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr} .taiwan img{width:100%;height:100%;object-fit:cover} .taiwan div{padding:45px} .taiwan p{color:var(--muted);line-height:1.9}
 .purchase{background:linear-gradient(180deg,#0a090c,#060607)} .pathways{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .path{padding:35px;border:1px solid var(--line);min-height:245px;transition:.4s;position:relative;overflow:hidden}
 .path:hover{background:rgba(86,52,106,.12);transform:translateY(-6px)} .path .num{font:11px Arial,sans-serif;color:var(--gold);letter-spacing:.18em} .path h3{font-size:30px;font-weight:400;margin:50px 0 12px} .path p{color:#99919d;line-height:1.7;font-size:13px} .path .arrow{position:absolute;right:25px;bottom:24px;color:var(--gold);font-size:22px}
-footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 @media(max-width:950px){
 .nav{padding:16px 3vw;gap:10px}
+.brand{min-width:0}
 .brand strong{font-size:12px;letter-spacing:.1em}
 .navlinks{gap:8px}
 .navlinks>a:not(.nav-cta){display:none}
