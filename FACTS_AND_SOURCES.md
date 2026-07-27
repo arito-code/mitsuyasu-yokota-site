@@ -51,6 +51,19 @@ https://www.atpress.ne.jp/news/134160
 Supports:
 - Waglass exhibition at Nagoya Marriott Associa Hotel.
 
+### Daikaku-ji (Kyoto) — venue background
+https://www.daikakuji.or.jp/about/
+https://www.daikakuji.or.jp/event/equipment/shinden/
+
+Supports (venue facts only):
+- Former Saga Imperial Villa; Shingon Daikaku-ji school head temple; founded 876.
+- Holds National Treasure imperial manuscripts (後宇多天皇宸翰 等).
+- **宸殿 (Shinden)**: Important Cultural Property; shinden-zukuri; associated with Tōfukumon-in; peony / red-plum rooms (Kanō Sanraku fusuma tradition).
+- **正寝殿**: also Important Cultural Property (do not conflate with 宸殿 unless confirmed).
+
+Wording:
+- Do **not** call the Shinden building itself a National Treasure (国宝). It is 重要文化財. National Treasures at the temple are primarily documents (宸翰).
+
 ---
 
 ## ARTIST DOCUMENTS ADDED 2026-07-27
@@ -64,6 +77,7 @@ Source folder: `baes_データ/横田満康_写真集（実績写真）/`
 | `AGORAgallery_アメリカ個展.jpg` | 30th Chelsea International Fine Art Competition, Honorable Mention, Agora Gallery |
 | `東京エレクトロンオースティン本社_個展.jpg` | Tokyo Electron America HQ exhibition poster; public opening 2015-11-16 |
 | `大阪芸大_最優秀賞.jpg` | Certificate content is **持田総章芸術賞** / Heart Art in KOBE 2019 (22nd AIDS Charity Art Exhibition), Excellent, 2019-07-13 — not Osaka University of Arts |
+| `京都大覚寺（国宝）_寝殿造り個展.jpg` | Waglass panels before peony fusuma — consistent with 宸殿「牡丹の間」 installation; year / formal title still TBD |
 
 Site assets:
 - `assets/ny-consulate-patronage.webp`
@@ -89,6 +103,7 @@ Include after verifying the final press release URL and exact exhibition venue /
 - Paris exhibition: venue / year / organizer
 - Dubai exhibition: venue / year / organizer
 - Bangkok / China exhibitions: venue / year
+- Daikaku-ji Shinden solo exhibition: year / formal exhibition title / organizer (installation photo exists)
 - Higashikuni-no-miya Cultural Award certificate / formal wording
 - Other museum selection records (Nikkokai, Kansai Niki, etc.)
 - Saudi-related broadcast / donation
