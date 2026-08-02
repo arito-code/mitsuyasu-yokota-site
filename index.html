@@ -29,7 +29,8 @@ background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filt
 .navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
 .nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:var(--gold);color:#090708}
-.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;flex-shrink:0}
+.nav-end{display:flex;align-items:center;gap:16px;margin-left:auto;flex-shrink:0}
 .inquire-fab{position:fixed;right:22px;bottom:22px;z-index:60;padding:14px 18px;background:var(--gold);color:#090708;border:1px solid var(--gold);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s,opacity .3s;white-space:nowrap}
 .inquire-fab:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(126,89,146,.28)}
 .inquire-fab.is-hidden{opacity:0;pointer-events:none;transform:translateY(8px)}
@@ -92,25 +93,35 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 .nav{padding:16px 3vw;gap:10px}
 .brand{min-width:0}
 .brand strong{font-size:12px;letter-spacing:.1em}
+.nav-end{gap:10px}
 
   .nav-toggle{display:flex}
   .navlinks{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:12px 4vw 22px;background:#070709;border-bottom:1px solid var(--line);z-index:55}
   .navlinks.is-open{display:flex}.nav:has(.navlinks.is-open),.nav:has(.nav-toggle[aria-expanded="true"]){background:#070709}
   .navlinks>a{display:block!important;padding:14px 0;border-bottom:1px solid rgba(201,164,93,.15);letter-spacing:.12em}
   .navlinks>.nav-cta{display:inline-flex!important;align-self:flex-start;margin-top:14px;padding:10px 14px}
-  .navlinks>.lang{margin:16px 0 0;align-self:flex-start}
 
 .nav-cta{padding:8px 10px;letter-spacing:.08em}
-.lang{margin-left:0;flex-shrink:0}
-.hero{min-height:100svh;height:auto}
+.lang button{padding:6px 9px}
+.hero{min-height:100svh;height:auto;align-items:flex-start;overflow:hidden;padding-top:calc(76px + env(safe-area-inset-top,0px))}
 .hero-bg{background-image:linear-gradient(180deg,rgba(5,5,7,.18) 0%,rgba(5,5,7,.42) 55%,rgba(5,5,7,.78) 100%),linear-gradient(90deg,rgba(5,5,7,.55) 0%,rgba(5,5,7,.22) 52%,rgba(5,5,7,.05) 100%),linear-gradient(180deg,rgba(245,241,232,.08) 0%,rgba(245,241,232,.04) 50%,transparent 100%),url('assets/peacock-waglass.webp?v=2')}
-.hero-copy{padding:0 6vw 10vh;width:min(760px,92vw)}
+.hero-copy{padding:18px 6vw 10vh;width:min(760px,92vw)}
+.kicker{margin-bottom:14px}
+.hero h1{font-size:clamp(36px,9.5vw,64px)}
+.hero p{margin:18px 0 22px;font-size:14px;line-height:1.8}
+.actions .btn{padding:13px 16px}
+.scroll{bottom:4vh}
 .gallery{grid-template-columns:1fr}.section-head,.kyoto-grid,.artist-grid,.ink-layout,.taiwan{grid-template-columns:1fr}.kyoto-photo{min-height:470px}.journey{grid-template-columns:1fr 1fr}.pathways{grid-template-columns:1fr}
 .artist-copy{padding:40px 24px}.artist-copy h3{font-size:32px}
 }
 @media(max-width:600px){
-.hero{min-height:0}
-.hero h1{font-size:clamp(40px,11vw,72px)}
+.hero{min-height:100svh;align-items:flex-start;overflow:hidden;padding-top:calc(72px + env(safe-area-inset-top,0px))}
+.hero-copy{padding:12px 6vw 8vh}
+.hero h1{font-size:clamp(32px,9vw,52px)}
+html[lang="ja"] .hero h1{line-height:1.2}
+.hero p{margin:14px 0 18px;font-size:13px;line-height:1.75}
+.actions{gap:10px}
+.actions .btn{padding:12px 14px;gap:18px}
 }
 
 .ink-stage{background:#111015 !important}
@@ -174,11 +185,13 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 <div id="progress"></div>
 <nav class="nav">
   <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="和硝子 / Kimono Glass Art" data-en="Wa-Glass / Kimono Glass Art">和硝子 / Kimono Glass Art</small></div>
-  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
-  <div class="navlinks" id="navlinks">
-    <a href="#waglass" data-ja="和硝子" data-en="Wa-Glass">和硝子</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
-    <a class="nav-cta" href="#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
-    <span class="lang"><button id="jp">JP</button><button id="en" class="active">EN</button></span>
+  <div class="nav-end">
+    <div class="navlinks" id="navlinks">
+      <a href="#waglass" data-ja="和硝子" data-en="Wa-Glass">和硝子</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
+      <a class="nav-cta" href="#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
+    </div>
+    <span class="lang" role="group" aria-label="Language"><button id="jp" type="button">JP</button><button id="en" type="button" class="active">EN</button></span>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
   </div>
 </nav>
 

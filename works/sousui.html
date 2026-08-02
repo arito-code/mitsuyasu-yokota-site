@@ -32,7 +32,8 @@ background:linear-gradient(180deg,rgba(5,5,7,.9),rgba(5,5,7,.15));backdrop-filte
 .navlinks{display:flex;gap:22px;align-items:center;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8d0d8}
 .nav-cta{padding:9px 14px;border:1px solid var(--gold);color:var(--gold2);transition:.3s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:var(--gold);color:#090708}
-.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;flex-shrink:0}
+.nav-end{display:flex;align-items:center;gap:16px;margin-left:auto;flex-shrink:0}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif}
 .lang .active{background:var(--gold);color:#0b0908}
 
@@ -127,10 +128,10 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   .navlinks.is-open{display:flex}.nav:has(.navlinks.is-open),.nav:has(.nav-toggle[aria-expanded="true"]){background:#070709}
   .navlinks>a{display:block!important;padding:14px 0;border-bottom:1px solid rgba(201,164,93,.15);letter-spacing:.12em}
   .navlinks>.nav-cta{display:inline-flex!important;align-self:flex-start;margin-top:14px;padding:10px 14px}
-  .navlinks>.lang{margin:16px 0 0;align-self:flex-start}
+  .nav-end{gap:10px}
 
   .nav-cta{padding:8px 10px;letter-spacing:.08em}
-  .lang{margin-left:0;flex-shrink:0}
+  .lang button{padding:6px 9px}
   .hero,.story-grid,.dual,.cta-inner,.related{grid-template-columns:1fr}
   .rel{grid-template-columns:1fr;grid-template-rows:1fr;min-height:300px}
   .rel img{grid-area:1/1;min-height:300px;height:320px;width:100%}
@@ -156,13 +157,15 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 <div id="progress"></div>
 <nav class="nav">
   <a class="brand" href="../index.html"><strong>MITSUYASU YOKOTA</strong><small data-ja="和硝子 / Kimono Glass Art" data-en="Wa-Glass / Kimono Glass Art">和硝子 / Kimono Glass Art</small></a>
-  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
-  <div class="navlinks" id="navlinks">
+  <div class="nav-end">
+    <div class="navlinks" id="navlinks">
     <a href="../index.html#waglass" data-ja="和硝子" data-en="Wa-Glass">和硝子</a>
     <a href="../index.html#purchase">Collect</a>
     <a href="../history.html">History</a>
     <a class="nav-cta" href="../index.html?type=work&amp;work=%E8%92%BC%E7%BF%A0#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
-    <span class="lang"><button id="jp">JP</button><button id="en" class="active">EN</button></span>
+    </div>
+    <span class="lang" role="group" aria-label="Language"><button id="jp" type="button">JP</button><button id="en" type="button" class="active">EN</button></span>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
