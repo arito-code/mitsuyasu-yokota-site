@@ -3,7 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mitsuyasu Yokota — Waglass / Space</title>
+<title>Mitsuyasu Yokota — Wa-Glass / Kimono Glass Art</title>
+<meta name="description" content="横田満康 — 着物ガラスアート「和硝子（Wa-Glass）」。京友禅や西陣織を硝子に封じ込める現代アーティスト。作品はオンラインでご購入いただけます。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mitsuyasu Yokota — Wa-Glass / Kimono Glass Art">
+<meta property="og:description" content="横田満康 — 着物ガラスアート「和硝子（Wa-Glass）」。京友禅や西陣織を硝子に封じ込める現代アーティスト。">
+<meta property="og:image" content="assets/peacock-waglass.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/portrait-yokota.webp" type="image/webp">
+<noscript><style>html:not(.lang-ready) body{visibility:visible!important}</style></noscript>
 <style>
 :root{
   --black:#070709; --black2:#0d0c10; --panel:#111015;
@@ -27,6 +35,14 @@ background:linear-gradient(180deg,rgba(5,5,7,.88),rgba(5,5,7,.12));backdrop-filt
 .inquire-fab.is-hidden{opacity:0;pointer-events:none;transform:translateY(8px)}
 @media(max-width:950px){.inquire-fab{right:14px;bottom:14px;padding:12px 14px}}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif} .lang .active{background:var(--gold);color:#0b0908}
+
+.nav-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);background:transparent;cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;z-index:60}
+.nav-toggle span{display:block;width:18px;height:1.5px;background:var(--gold2);transition:transform .25s,opacity .25s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav{flex-wrap:wrap}
+@media(min-width:951px){.navlinks{display:flex!important}}
 .hero{height:100vh;min-height:720px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:-5%;background-image:linear-gradient(90deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.72) 34%,rgba(5,5,7,.08) 72%),url('assets/peacock-waglass.webp?v=2');
 background-size:cover;background-position:center 42%;transform:scale(1.06);animation:heroZoom 14s ease-in-out infinite alternate}
@@ -36,8 +52,7 @@ background-size:cover;background-position:center 42%;transform:scale(1.06);anima
 .kicker{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
 .hero h1{margin:0;font-weight:400;font-size:clamp(54px,8.2vw,122px);line-height:.84;letter-spacing:-.055em}
 .hero h1 em{font-style:normal;color:var(--gold2)} .hero p{max-width:640px;color:#d1cad2;line-height:1.95;font-size:15px;margin:30px 0}
-/* JP: English display tracking/breaks pull Japanese awkwardly */
-html[lang="ja"] h1,html[lang="ja"] h2{letter-spacing:.04em;line-height:1.2;word-break:keep-all;line-break:strict;overflow-wrap:normal}
+html[lang="ja"] h1,html[lang="ja"] h2{letter-spacing:.04em;line-height:1.2;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 html[lang="ja"] .hero h1{letter-spacing:.06em;line-height:1.18}
 html[lang="en"] h1,html[lang="en"] h2{word-break:normal;line-break:auto}
 .actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;gap:30px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s;max-width:100%}
@@ -66,7 +81,6 @@ main section{position:relative;padding:120px 7vw;border-top:1px solid rgba(201,1
 .ink{overflow:hidden;background:radial-gradient(circle at 80% 50%,rgba(86,52,106,.22),transparent 30%),#09080b} .ink-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
 .ink-stage{min-height:560px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#e9dfcf,#c7bba8);overflow:hidden}
 .ink-stage:before{content:"書";font-size:min(42vw,420px);color:#0c0b0b;line-height:.7;transform:rotate(-5deg);opacity:.92;font-family:"Yu Mincho",serif}
-.ink-stage:after{content:"Coming soon";position:absolute;bottom:20px;left:20px;color:#2c2522;font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
 .ink-copy h2{margin-bottom:30px} .ink-copy p{color:var(--muted);line-height:2} .price{margin:28px 0;color:var(--gold2);font:16px Arial,sans-serif;letter-spacing:.08em}
 .journey{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)} .city{padding:34px 25px;min-height:210px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .city b{font-size:27px;font-weight:400;color:var(--gold2)} .city span{display:block;margin-top:75px;color:#a59da7;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
@@ -78,25 +92,30 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 .nav{padding:16px 3vw;gap:10px}
 .brand{min-width:0}
 .brand strong{font-size:12px;letter-spacing:.1em}
-.navlinks{gap:8px}
-.navlinks>a:not(.nav-cta){display:none}
+
+  .nav-toggle{display:flex}
+  .navlinks{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:12px 4vw 22px;background:#070709;border-bottom:1px solid var(--line);z-index:55}
+  .navlinks.is-open{display:flex}.nav:has(.navlinks.is-open),.nav:has(.nav-toggle[aria-expanded="true"]){background:#070709}
+  .navlinks>a{display:block!important;padding:14px 0;border-bottom:1px solid rgba(201,164,93,.15);letter-spacing:.12em}
+  .navlinks>.nav-cta{display:inline-flex!important;align-self:flex-start;margin-top:14px;padding:10px 14px}
+  .navlinks>.lang{margin:16px 0 0;align-self:flex-start}
+
 .nav-cta{padding:8px 10px;letter-spacing:.08em}
 .lang{margin-left:0;flex-shrink:0}
-.hero{min-height:640px}
+.hero{min-height:100svh;height:auto}
 .hero-bg{background-image:linear-gradient(180deg,rgba(5,5,7,.18) 0%,rgba(5,5,7,.42) 55%,rgba(5,5,7,.78) 100%),linear-gradient(90deg,rgba(5,5,7,.55) 0%,rgba(5,5,7,.22) 52%,rgba(5,5,7,.05) 100%),linear-gradient(180deg,rgba(245,241,232,.08) 0%,rgba(245,241,232,.04) 50%,transparent 100%),url('assets/peacock-waglass.webp?v=2')}
 .hero-copy{padding:0 6vw 10vh;width:min(760px,92vw)}
 .gallery{grid-template-columns:1fr}.section-head,.kyoto-grid,.artist-grid,.ink-layout,.taiwan{grid-template-columns:1fr}.kyoto-photo{min-height:470px}.journey{grid-template-columns:1fr 1fr}.pathways{grid-template-columns:1fr}
+.artist-copy{padding:40px 24px}.artist-copy h3{font-size:32px}
+}
+@media(max-width:600px){
+.hero{min-height:0}
+.hero h1{font-size:clamp(40px,11vw,72px)}
 }
 
-.media-unset{position:relative;min-height:420px;background:linear-gradient(135deg,#141218,#0b0a0e);border:1px dashed rgba(201,164,93,.35);display:flex;align-items:center;justify-content:center;padding:28px}
-.media-unset .media-note{max-width:420px;margin:0;padding:14px 16px;border:1px solid rgba(201,164,93,.35);background:rgba(5,5,7,.82);color:var(--gold2,#EAD49D);font:12px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em}
-.media-note-inline{margin:14px 0 0;color:#c9a45d;font:11px/1.7 Arial,"Noto Sans JP",sans-serif;letter-spacing:.04em;opacity:.9}
 .ink-stage{background:#111015 !important}
 .ink-stage img{width:100%;height:100%;object-fit:contain;padding:36px;box-sizing:border-box}
 .ink-stage:before,.ink-stage:after{display:none !important}
-.kyoto-photo .media-unset,.taiwan .media-unset{min-height:100%;width:100%}
-.card .media-unset{min-height:300px}
-.hero-img .media-unset{min-height:600px}
 
 </style>
 
@@ -116,7 +135,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 .assure{border:1px solid rgba(201,164,93,.28);padding:26px 22px;min-height:190px}.assure .icon{color:#c9a45d;font:24px Georgia,serif}.assure h3{font-weight:400;font-size:20px;margin:25px 0 9px}.assure p{color:#948b98;line-height:1.7;font-size:13px;margin:0}
 .works-preview{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
 .work-preview{border:1px solid rgba(201,164,93,.28);display:grid;grid-template-columns:.9fr 1.1fr;background:#0c0b0f;overflow:hidden}
-.work-preview img{width:100%;height:360px;object-fit:cover}.work-preview .media-unset{min-height:360px;height:360px;border:0;border-right:1px solid rgba(201,164,93,.28)}.wp-copy{padding:28px}.wp-copy .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:#c9a45d;text-transform:uppercase}.wp-copy h3{font-size:28px;font-weight:400;margin:15px 0}.wp-copy p{color:#918995;line-height:1.75;font-size:13px}.wp-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:25px 0;color:#bbb2bd;font:10px Arial,sans-serif;letter-spacing:.08em}.wp-price{font:18px Georgia,serif;color:#ead49d}
+.work-preview img{width:100%;height:360px;object-fit:cover}.wp-copy{padding:28px}.wp-copy .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:#c9a45d;text-transform:uppercase}.wp-copy h3{font-size:28px;font-weight:400;margin:15px 0}.wp-copy p{color:#918995;line-height:1.75;font-size:13px}.wp-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:25px 0;color:#bbb2bd;font:10px Arial,sans-serif;letter-spacing:.08em}.wp-price{font:18px Georgia,serif;color:#ead49d}
 @media(max-width:950px){.proof-inner,.process,.assurance{grid-template-columns:1fr 1fr}.works-preview,.work-preview{grid-template-columns:1fr}}
 @media(max-width:600px){.proof-inner,.process,.assurance{grid-template-columns:1fr}}
 
@@ -154,9 +173,10 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 <body>
 <div id="progress"></div>
 <nav class="nav">
-  <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="Waglass / 空間" data-en="Waglass / Space">Waglass / 空間</small></div>
-  <div class="navlinks">
-    <a href="#waglass">Waglass</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
+  <div class="brand"><strong>MITSUYASU YOKOTA</strong><small data-ja="和硝子 / Kimono Glass Art" data-en="Wa-Glass / Kimono Glass Art">和硝子 / Kimono Glass Art</small></div>
+  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <a href="#waglass" data-ja="和硝子" data-en="Wa-Glass">和硝子</a><a href="#kyoto">Kyoto Station</a><a href="#artist">Artist</a><a href="history.html">History</a><a href="#purchase">Collect</a>
     <a class="nav-cta" href="#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
     <span class="lang"><button id="jp">JP</button><button id="en" class="active">EN</button></span>
   </div>
@@ -167,7 +187,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   <div class="hero-copy">
     <div class="kicker" data-ja="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER" data-en="KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER">KYOTO · JAPAN / ARTIST · ARCHITECT · SPATIAL DESIGNER</div>
     <h1 data-ja="日本の記憶を、<br><em>光の中へ。</em>" data-en="Preserving<br><em>Japanese Memory.</em>">日本の記憶を、<br><em>光の中へ。</em></h1>
-    <p data-ja="京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。" data-en="Waglass encases the memory of Kyo-Yuzen kimono and Nishijin textiles within glass. Mitsuyasu Yokota transforms Japanese heritage into works made to live again in contemporary spaces. Works are available for online purchase.">京友禅や西陣織の記憶を硝子に封じ込める「和硝子」。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。</p>
+    <p data-ja="着物ガラスアート「和硝子」——京友禅や西陣織の記憶を硝子に封じ込める作品です。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。" data-en="Wa-Glass is kimono glass art — authentic Kyo-Yuzen and Nishijin textiles sealed within glass. Mitsuyasu Yokota transforms Japanese heritage into works made to live again in contemporary spaces. Works are available for online purchase.">着物ガラスアート「和硝子」——京友禅や西陣織の記憶を硝子に封じ込める作品です。横田満康は、日本の伝統を保存するのではなく、現代の空間で再び生きる作品へと変えていきます。作品はオンラインでご購入いただけます。</p>
     <div class="actions">
       <a class="btn primary" href="#waglass" data-ja="作品を見る →" data-en="AVAILABLE WORKS →">作品を見る →</a>
       <a class="btn" href="?type=commission#contact" data-ja="プライベートオーダー →" data-en="PRIVATE COMMISSION →">プライベートオーダー →</a>
@@ -179,9 +199,9 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <section class="proof-strip">
   <div class="proof-inner reveal">
-    <div class="proof"><b>Kyoto Station</b><span data-ja="新幹線八条口に和硝子を展示（JR東海公式リリース掲載）" data-en="Waglass exhibited at the Shinkansen Hachijo Exit (JR Central official release)">新幹線八条口に和硝子を展示（JR東海公式リリース掲載）</span></div>
+    <div class="proof"><b>Kyoto Station</b><span data-ja="新幹線八条口に和硝子を展示（JR東海公式リリース掲載）" data-en="Wa-Glass exhibited at the Shinkansen Hachijo Exit (JR Central official release)">新幹線八条口に和硝子を展示（JR東海公式リリース掲載）</span></div>
     <div class="proof"><b>Nagoya Castle</b><span data-ja="本丸御殿「孔雀の間」で展覧会" data-en="Exhibition at the Honmaru Palace">本丸御殿「孔雀の間」で展覧会</span></div>
-    <div class="proof"><b>MBS Kyoto Chishin</b><span data-ja="横田満康と和硝子を特集" data-en="Featured profile on Yokota and Waglass">横田満康と和硝子を特集</span></div>
+    <div class="proof"><b>MBS Kyoto Chishin</b><span data-ja="横田満康と和硝子を特集" data-en="Featured profile on Yokota and Wa-Glass">横田満康と和硝子を特集</span></div>
     <div class="proof"><b>International</b><span data-ja="New York / Austin / Taipei ほか" data-en="New York / Austin / Taipei and beyond">New York / Austin / Taipei ほか</span></div>
   </div>
   <div class="proof-cta reveal">
@@ -192,11 +212,11 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <main>
 <section id="waglass"><div class="wrap">
-  <div class="section-head reveal"><h2><span class="gold">Waglass.</span><br><span data-ja="伝統を、<br>未来の光へ。" data-en="Heritage,<br>reborn in light.">伝統を、<br>未来の光へ。</span></h2><p data-ja="和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。硝子であるがゆえに、毎日見る方向によって見え方が変わり、映し込む風景も移ろいます。自然と融合するアートとして、背景の桜や紅葉など、日本の四季を感じることができます。" data-en="Waglass encases authentic Kyo-Yuzen kimono and Nishijin textiles within glass. Rather than imitating Japanese patterns, it carries the time, craft and memory of the original textile into a new work. Because it is glass, its appearance shifts with the angle of each day's gaze — and the scenery it holds changes with it. As art that merges with nature, it reflects its surroundings and lets you feel Japan's seasons — cherry blossoms, autumn leaves, and more.">和硝子は、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。硝子であるがゆえに、毎日見る方向によって見え方が変わり、映し込む風景も移ろいます。自然と融合するアートとして、背景の桜や紅葉など、日本の四季を感じることができます。</p></div>
+  <div class="section-head reveal"><h2><span class="gold">Wa-Glass.</span><br><span data-ja="伝統を、<br>未来の光へ。" data-en="Kimono Glass Art.<br>Heritage, reborn in light.">伝統を、<br>未来の光へ。</span></h2><p data-ja="和硝子（Wa-Glass）は、着物ガラスアートとして、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。硝子であるがゆえに、毎日見る方向によって見え方が変わり、映し込む風景も移ろいます。自然と融合するアートとして、背景の桜や紅葉など、日本の四季を感じることができます。" data-en="Wa-Glass is kimono glass art: authentic Kyo-Yuzen kimono and Nishijin textiles sealed within glass. Rather than imitating Japanese patterns, it carries the time, craft and memory of the original textile into a new work. Because it is glass, its appearance shifts with the angle of each day's gaze — and the scenery it holds changes with it. As art that merges with nature, it reflects its surroundings and lets you feel Japan's seasons — cherry blossoms, autumn leaves, and more.">和硝子（Wa-Glass）は、着物ガラスアートとして、京友禅や西陣織の帯そのものをガラスに封じ込める横田満康の表現です。模様を模倣するのではなく、本物の布が持つ時間、職人技、記憶を作品の中へ残します。硝子であるがゆえに、毎日見る方向によって見え方が変わり、映し込む風景も移ろいます。自然と融合するアートとして、背景の桜や紅葉など、日本の四季を感じることができます。</p></div>
   <div class="gallery reveal">
-    <a class="art" href="works/katsushika-hokusai.html" style="color:inherit;text-decoration:none"><img src="assets/katsushika-hokusai.webp" alt="横田満康 和硝子 葛飾北斎"><div class="art-cap"><b data-ja="葛飾北斎" data-en="Katsushika Hokusai">葛飾北斎</b><span>WAGLASS / SOLD OUT</span></div></a>
-    <article class="art small"><img src="assets/dragon-large-waglass.webp" alt="横田満康 和硝子 神龍"><div class="art-cap"><b data-ja="神龍" data-en="Divine Dragon">神龍</b><span>WAGLASS / JAPAN</span></div></article>
-    <article class="art small"><img src="assets/kaguya-waglass.webp" alt="横田満康 和硝子 かぐや姫"><div class="art-cap"><b data-ja="かぐや姫" data-en="Princess Kaguya">かぐや姫</b><span>WAGLASS / JAPAN</span></div></article>
+    <a class="art" href="works/katsushika-hokusai.html" style="color:inherit;text-decoration:none"><img src="assets/katsushika-hokusai.webp" alt="横田満康 和硝子 葛飾北斎"><div class="art-cap"><b data-ja="葛飾北斎" data-en="Katsushika Hokusai">葛飾北斎</b><span>WA-GLASS / SOLD OUT</span></div></a>
+    <article class="art small"><img src="assets/dragon-large-waglass.webp" alt="横田満康 和硝子 神龍"><div class="art-cap"><b data-ja="神龍" data-en="Divine Dragon">神龍</b><span>WA-GLASS / JAPAN</span></div></article>
+    <article class="art small"><img src="assets/kaguya-waglass.webp" alt="横田満康 和硝子 かぐや姫"><div class="art-cap"><b data-ja="かぐや姫" data-en="Princess Kaguya">かぐや姫</b><span>WA-GLASS / JAPAN</span></div></article>
   </div>
 
 
@@ -216,7 +236,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <section id="kyoto" class="kyoto"><div class="kyoto-grid">
   <div class="kyoto-copy reveal"><div class="number">08</div><h2><span class="gold">Kyoto Station.</span><br><span data-ja="京都の玄関口に、<br>8作品。" data-en="Eight works at a<br>gateway to Kyoto.">京都の玄関口に、<br>8作品。</span></h2>
-  <p data-ja="京都駅新幹線八条口には、横田満康の和硝子8作品が展示されています。" data-en="Eight Waglass works are on display at Kyoto Station's Shinkansen Hachijo Exit.">京都駅新幹線八条口には、横田満康の和硝子8作品が展示されています。</p>
+  <p data-ja="京都駅新幹線八条口には、横田満康の和硝子8作品が展示されています。" data-en="Eight Wa-Glass works are on display at Kyoto Station's Shinkansen Hachijo Exit.">京都駅新幹線八条口には、横田満康の和硝子8作品が展示されています。</p>
   <div class="actions"><a class="btn" href="#purchase" data-ja="オンラインで見る →" data-en="SHOP ONLINE →">オンラインで見る →</a></div></div>
   <div class="kyoto-photo"><img id="kyotoImg" src="assets/kyoto-station.webp" alt="京都駅 新幹線八条口 和硝子展示"></div>
 </div></section>
@@ -225,7 +245,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
   <div class="artist-grid reveal">
     <div class="artist-photo"><img src="assets/portrait-yokota.webp" alt="横田満康 MBS京都知新"></div>
     <div class="artist-copy"><div class="kicker">THE ARTIST</div><h3>横田満康<br><span class="gold">Mitsuyasu Yokota</span></h3>
-      <p data-ja="建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。" data-en="An architect with a background in kimono design, Mitsuyasu Yokota began developing Waglass as a way to carry Japanese textile heritage into contemporary space. Since 2013, his work has expanded from Kyoto across Japan and overseas. His architectural perspective allows each work to be conceived not only as an object, but as part of a place.">建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。</p>
+      <p data-ja="建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。" data-en="An architect with a background in kimono design, Mitsuyasu Yokota began developing Wa-Glass as a way to carry Japanese textile heritage into contemporary space. Since 2013, his work has expanded from Kyoto across Japan and overseas. His architectural perspective allows each work to be conceived not only as an object, but as part of a place.">建築家として空間を考え、着物デザインを学び、そこから和硝子を生み出した横田満康。2013年から和硝子を本格制作し、作品は京都、名古屋、東京、米国、アジアへと広がってきました。作品を単体で終わらせず「どこに、どう存在させるか」まで考えられることが、横田作品の大きな特徴です。</p>
       <div class="credentials"><div class="cred"><b>Kyoto Station</b><span>8 WORKS / HACHIJO EXIT</span></div><div class="cred"><b>Nagoya Castle</b><span>HONMARU PALACE</span></div><div class="cred"><b>New York</b><span>NIPPON CLUB / CHELSEA</span></div><div class="cred"><b>Austin</b><span>TOKYO ELECTRON HQ</span></div></div>
       <div class="actions"><a class="btn primary" href="history.html" data-ja="経歴を見る →" data-en="VIEW HISTORY →">経歴を見る →</a></div>
     </div>
@@ -235,17 +255,17 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 <section><div class="wrap">
   <div class="section-head reveal"><h2><span class="gold">A journey.</span><br><span data-ja="京都から、<br>世界へ。" data-en="From Kyoto<br>to the world.">京都から、<br>世界へ。</span></h2><p data-ja="横田の作品は、京都からニューヨーク、オースティン、パリ、ドバイへと渡ってきました。現在はオンライン販売を基本としています。" data-en="From Kyoto, Yokota's work has travelled to New York, Austin, Paris and Dubai. Collecting is primarily online.">横田の作品は、京都からニューヨーク、オースティン、パリ、ドバイへと渡ってきました。現在はオンライン販売を基本としています。</p></div>
   <div class="journey reveal"><div class="city"><b>KYOTO</b><span>JAPAN / ORIGIN</span></div><div class="city"><b>NEW YORK</b><span>USA / EXHIBITION</span></div><div class="city"><b>AUSTIN</b><span>USA / EXHIBITION</span></div><div class="city"><b>PARIS · DUBAI</b><span>INTERNATIONAL</span></div></div>
-  <div class="taiwan reveal"><img src="assets/daikakuji-shinden-exhibition.webp" alt="京都・大覚寺 宸殿（寝殿造り）和硝子個展"><div><div class="kicker">DAIKAKU-JI / 2014</div><h3 style="font-size:34px;font-weight:400;margin:12px 0" data-ja="個展" data-en="Solo exhibition">個展</h3><p data-ja="2014年2月、京都・大覚寺の宸殿（寝殿造り）にて和硝子の個展を開催しました。" data-en="In February 2014, a solo exhibition of Waglass was held in the Shinden at Daikaku-ji, Kyoto.">2014年2月、京都・大覚寺の宸殿（寝殿造り）にて和硝子の個展を開催しました。</p></div></div>
+  <div class="taiwan reveal"><img src="assets/daikakuji-shinden-exhibition.webp" alt="京都・大覚寺 宸殿（寝殿造り）和硝子個展"><div><div class="kicker">DAIKAKU-JI / 2014</div><h3 style="font-size:34px;font-weight:400;margin:12px 0" data-ja="個展" data-en="Solo exhibition">個展</h3><p data-ja="2014年2月、京都・大覚寺の宸殿（寝殿造り）にて和硝子の個展を開催しました。" data-en="In February 2014, a solo exhibition of Wa-Glass was held in the Shinden at Daikaku-ji, Kyoto.">2014年2月、京都・大覚寺の宸殿（寝殿造り）にて和硝子の個展を開催しました。</p></div></div>
 </div></section>
 
 
 <section class="collector"><div class="wrap">
   <div class="section-head reveal"><h2><span class="gold">Collect.</span><br><span data-ja="作品を、<br>所有する。" data-en="From artwork<br>to ownership.">作品を、<br>所有する。</span></h2><p data-ja="販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。" data-en="Collecting is primarily online. Each work lists material, dimensions, year, provenance and shipping terms.">販売はオンラインが基本です。素材・サイズ・制作年・来歴・配送条件を明記し、一点物を安心して迎えていただけます。</p></div>
   <div class="works-preview reveal">
-    <a class="work-preview" href="works/katsushika-hokusai.html" style="color:inherit;text-decoration:none"><img src="assets/katsushika-hokusai.webp" alt="Waglass Katsushika Hokusai"><div class="wp-copy"><div class="type">WAGLASS / SOLD OUT</div><h3 data-ja="葛飾北斎" data-en="Katsushika Hokusai">葛飾北斎</h3><p data-ja="富岳三十六景「神奈川沖浪裏」を硝子で完全再現。手すき和紙・金の縁取り・ダイヤモンド25石。" data-en="A complete glass recreation of Hokusai's Great Wave off Kanagawa — handmade washi, gold outlining, and 25 diamonds.">富岳三十六景「神奈川沖浪裏」を硝子で完全再現。手すき和紙・金の縁取り・ダイヤモンド25石。</p><div class="wp-meta"><span>YEAR: 2024.2</span><span>SIZE: 260×380×10mm</span><span data-ja="販売済み / SOLD OUT" data-en="SOLD OUT">販売済み / SOLD OUT</span><span>USD 20,000</span></div><div class="wp-price">SOLD OUT</div></div></a>
-    <a class="work-preview" href="works/sousui.html" style="color:inherit;text-decoration:none"><img src="assets/sousui-1.webp" alt="Waglass Sousui"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3><p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif: woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p><div class="wp-meta"><span>YEAR: 2022</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
-    <a class="work-preview" href="works/kinouka-mai.html" style="color:inherit;text-decoration:none"><img src="assets/kinouka-mai.webp" alt="Waglass Kinouka Mai"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</h3><p data-ja="京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。" data-en="Golden sakura in Kyoto kinsai, with silver branches and bokashi dyeing.">京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。</p><div class="wp-meta"><span>YEAR: 2019</span><span>SIZE: Φ230×10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
-    <a class="work-preview" href="works/tansui.html" style="color:inherit;text-decoration:none"><img src="assets/tansui.webp" alt="Waglass Tansui"><div class="wp-copy"><div class="type">WAGLASS / ONE OF ONE</div><h3 data-ja="淡透" data-en="Tansui">淡透</h3><p data-ja="辻が花をモチーフに、地色の透明感と華が浮き出る技法。京友禅の最高技術による一点物。" data-en="A Tsujigahana motif with translucent ground and flowers that rise from it — crafted with the highest Kyo-Yuzen technique.">辻が花をモチーフに、地色の透明感と華が浮き出る技法。京友禅の最高技術による一点物。</p><div class="wp-meta"><span>MOTIF: TSUJIGAHANA</span><span>YEAR: xxxx</span><span>SIZE: xxxx</span><span>PRICE ON REQUEST</span></div><div class="wp-price">Price on Request</div></div></a>
+    <a class="work-preview" href="works/katsushika-hokusai.html" style="color:inherit;text-decoration:none"><img src="assets/katsushika-hokusai.webp" alt="Wa-Glass Katsushika Hokusai"><div class="wp-copy"><div class="type">WA-GLASS / SOLD OUT</div><h3 data-ja="葛飾北斎" data-en="Katsushika Hokusai">葛飾北斎</h3><p data-ja="富岳三十六景「神奈川沖浪裏」を硝子で完全再現。手すき和紙・金の縁取り・ダイヤモンド25石。" data-en="A complete glass recreation of Hokusai's Great Wave off Kanagawa — handmade washi, gold outlining, and 25 diamonds.">富岳三十六景「神奈川沖浪裏」を硝子で完全再現。手すき和紙・金の縁取り・ダイヤモンド25石。</p><div class="wp-meta"><span>YEAR: 2024.2</span><span>SIZE: 260×380×10mm</span><span data-ja="販売済み / SOLD OUT" data-en="SOLD OUT">販売済み / SOLD OUT</span><span>USD 20,000</span></div><div class="wp-price">SOLD OUT</div></div></a>
+    <a class="work-preview" href="works/sousui.html" style="color:inherit;text-decoration:none"><img src="assets/sousui-1.webp" alt="Wa-Glass Sousui"><div class="wp-copy"><div class="type">WA-GLASS / KIMONO GLASS ART</div><h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3><p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif: woven in gold, silver and blue-green threads, finished with Kyoto kinsai.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p><div class="wp-meta"><span>YEAR: 2022</span><span>SIZE: Φ280mm / T.approx.10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
+    <a class="work-preview" href="works/kinouka-mai.html" style="color:inherit;text-decoration:none"><img src="assets/kinouka-mai.webp" alt="Wa-Glass Kinouka Mai"><div class="wp-copy"><div class="type">WA-GLASS / KIMONO GLASS ART</div><h3 data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</h3><p data-ja="京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。" data-en="Golden sakura in Kyoto kinsai, with silver branches and bokashi dyeing.">京金彩で金の桜を表現。銀の枝とぼかし加工が華やぎを深める一点物。</p><div class="wp-meta"><span>YEAR: 2019</span><span>SIZE: Φ230×10mm</span><span>STOCK: 1</span><span>COA: INCLUDED</span></div></div></a>
+    <a class="work-preview" href="works/tansui.html" style="color:inherit;text-decoration:none"><img src="assets/tansui.webp" alt="Wa-Glass Tansui"><div class="wp-copy"><div class="type">WA-GLASS / KIMONO GLASS ART</div><h3 data-ja="淡透" data-en="Tansui">淡透</h3><p data-ja="辻が花をモチーフに、地色の透明感と華が浮き出る技法。京友禅の最高技術による一点物。" data-en="A Tsujigahana motif with translucent ground and flowers that rise from it — crafted with the highest Kyo-Yuzen technique.">辻が花をモチーフに、地色の透明感と華が浮き出る技法。京友禅の最高技術による一点物。</p><div class="wp-meta"><span>MOTIF: TSUJIGAHANA</span><span data-ja="YEAR: お問い合わせ" data-en="YEAR: Please inquire">YEAR: お問い合わせ</span><span>SIZE: Φ230mm × 10mm</span><span>PRICE ON REQUEST</span></div><div class="wp-price">Price on Request</div></div></a>
   </div>
   <div class="assurance reveal">
     <div class="assure"><div class="icon">壱</div><h3 data-ja="One of One" data-en="One of One">One of One</h3><p data-ja="すべての作品は一点物。固有の作品番号で管理されています。" data-en="Every work is one of one, with its own identification number.">すべての作品は一点物。固有の作品番号で管理されています。</p></div>
@@ -261,7 +281,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     <a class="btn primary" href="#contact" data-ja="問い合わせる →" data-en="INQUIRE →">問い合わせる →</a>
   </div>
   <div class="pathways reveal">
-    <a class="path" href="?type=available#contact"><div class="num">01 / ONLINE</div><h3>Available Works</h3><p data-ja="完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。" data-en="Purchase completed Waglass works online, with price, size, provenance and shipping details.">完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。</p><div class="arrow">→</div></a>
+    <a class="path" href="?type=available#contact"><div class="num">01 / ONLINE</div><h3>Available Works</h3><p data-ja="完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。" data-en="Purchase completed Wa-Glass works online, with price, size, provenance and shipping details.">完成済みの和硝子を、オンラインでご購入。価格・サイズ・来歴・配送条件を確認して進められます。</p><div class="arrow">→</div></a>
     <a class="path" href="?type=commission#contact"><div class="num">02 / PERSONAL</div><h3>Private Commission</h3><p data-ja="人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。" data-en="One-of-a-kind work from a personal story, family textile or corporate philosophy. Begin with an online consultation.">人物や家族の物語、着物、企業理念などを起点に一点物を制作。最初はオンライン相談へ。</p><div class="arrow">→</div></a>
   </div>
 </div></section>
@@ -337,10 +357,24 @@ const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.c
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 window.addEventListener('scroll',()=>{
   const h=document.documentElement.scrollHeight-innerHeight;
-  document.getElementById('progress').style.width=(scrollY/h*100)+'%';
+  document.getElementById('progress').style.width=(h>0?scrollY/h*100:0)+'%';
   const k=document.getElementById('kyotoImg');
   if(k){const r=k.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) k.style.transform=`scale(1.08) translateY(${(innerHeight/2-r.top-r.height/2)*.025}px)`;}
-});
+},{passive:true});
+
+(function(){
+  const toggle=document.querySelector('.nav-toggle');
+  const panel=document.getElementById('navlinks');
+  if(!toggle||!panel) return;
+  const close=()=>{panel.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');};
+  toggle.addEventListener('click',()=>{
+    const open=panel.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  window.addEventListener('resize',()=>{if(innerWidth>950) close();});
+})();
+
 const fab=document.querySelector('.inquire-fab');
 const contact=document.getElementById('contact');
 if(fab&&contact){

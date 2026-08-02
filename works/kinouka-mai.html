@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>金桜華舞 / Kinouka Mai — Mitsuyasu Yokota</title>
+<title>金桜華舞 / Kinouka Mai — Wa-Glass / Mitsuyasu Yokota</title>
 <meta name="description" content="和硝子「金桜華舞」。京金彩の京都技法で金の桜を表現し、銀色で枝を描き、ぼかし加工を施した作品。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="金桜華舞 / Kinouka Mai — Mitsuyasu Yokota">
+<meta property="og:description" content="和硝子「金桜華舞」。京金彩で金の桜を表現。銀の枝とぼかし加工の一点物。">
+<meta property="og:image" content="../assets/kinouka-mai.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/portrait-yokota.webp" type="image/webp">
+<noscript><style>html:not(.lang-ready) body{visibility:visible!important}</style></noscript>
 <style>
 :root{
   --black:#070709; --black2:#0D0C10; --panel:#111015;
@@ -28,6 +35,14 @@ background:linear-gradient(180deg,rgba(5,5,7,.9),rgba(5,5,7,.15));backdrop-filte
 .lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-left:12px}
 .lang button{border:0;background:transparent;color:#d8d0d8;padding:7px 10px;cursor:pointer;font:10px Arial,sans-serif}
 .lang .active{background:var(--gold);color:#0b0908}
+
+.nav-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);background:transparent;cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;z-index:60}
+.nav-toggle span{display:block;width:18px;height:1.5px;background:var(--gold2);transition:transform .25s,opacity .25s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav{flex-wrap:wrap}
+@media(min-width:981px){.navlinks{display:flex!important}}
 .kicker{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 .gold{color:var(--gold)} .gold2{color:var(--gold2)}
 .btn{display:inline-flex;align-items:center;gap:14px;padding:15px 19px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.35s;max-width:100%}
@@ -36,7 +51,7 @@ background:linear-gradient(180deg,rgba(5,5,7,.9),rgba(5,5,7,.15));backdrop-filte
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease}
 .reveal.show{opacity:1;transform:none}
-html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{letter-spacing:.04em;line-height:1.25;word-break:keep-all;line-break:strict;overflow-wrap:normal}
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{letter-spacing:.04em;line-height:1.25;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 html[lang="ja"] h1{letter-spacing:.06em;line-height:1.18}
 html[lang="en"] h1,html[lang="en"] h2{word-break:normal}
 .hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;padding-top:78px}
@@ -63,7 +78,6 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .spec{background:linear-gradient(145deg,#0c0b0f,#121016);padding:28px 24px;min-height:140px}
 .spec b{display:block;font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 .spec span{display:block;color:#d8d0d8;line-height:1.7;font-size:15px}
-.spec .xxxx{color:#7f7782}
 .story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:start}
 .story-copy p{color:var(--muted);line-height:2;font-size:15px;margin:0 0 22px}
 .motif{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
@@ -94,24 +108,37 @@ h2{font-size:clamp(36px,4.8vw,68px);font-weight:400;line-height:1.15;margin:0}
 .cta-side{position:relative;overflow:hidden;background:#050507}
 .cta-side img{width:100%;height:100%;object-fit:cover;opacity:.9}
 .related{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.rel{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);background:#0c0b0f;overflow:hidden;min-height:220px;transition:.35s}
+.rel{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);background:#0c0b0f;overflow:hidden;min-height:220px;transition:.35s;position:relative}
 .rel:hover{transform:translateY(-4px);background:rgba(86,52,106,.1)}
-.rel img{width:100%;height:100%;object-fit:cover;min-height:220px}
-.rel div{padding:28px}
+.rel img{width:100%;height:100%;object-fit:cover;min-height:220px;display:block}
+.rel div{padding:28px;background:rgba(7,7,9,.88);position:relative;z-index:1}
 .rel .type{font:9px Arial,sans-serif;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
-.rel h3{font-size:26px;font-weight:400;margin:14px 0 10px}
-.rel p{color:#918995;line-height:1.7;font-size:13px;margin:0}
+.rel h3{font-size:26px;font-weight:400;margin:14px 0 10px;color:var(--white)}
+.rel p{color:#c8bfcb;line-height:1.7;font-size:13px;margin:0}
 footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;color:#847d87;font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 @media (max-width:980px){
   .nav{padding:16px 3vw;gap:10px}
   .brand{min-width:0}
   .brand strong{font-size:12px;letter-spacing:.1em}
   .navlinks{gap:8px}
-  .navlinks>a:not(.nav-cta){display:none}
+
+  .nav-toggle{display:flex}
+  .navlinks{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:12px 4vw 22px;background:#070709;border-bottom:1px solid var(--line);z-index:55}
+  .navlinks.is-open{display:flex}.nav:has(.navlinks.is-open),.nav:has(.nav-toggle[aria-expanded="true"]){background:#070709}
+  .navlinks>a{display:block!important;padding:14px 0;border-bottom:1px solid rgba(201,164,93,.15);letter-spacing:.12em}
+  .navlinks>.nav-cta{display:inline-flex!important;align-self:flex-start;margin-top:14px;padding:10px 14px}
+  .navlinks>.lang{margin:16px 0 0;align-self:flex-start}
+
   .nav-cta{padding:8px 10px;letter-spacing:.08em}
   .lang{margin-left:0;flex-shrink:0}
-  .hero,.story-grid,.dual,.cta-inner,.related,.rel{grid-template-columns:1fr}
-  .hero-visual{min-height:62vh}
+  .hero,.story-grid,.dual,.cta-inner,.related{grid-template-columns:1fr}
+  .rel{grid-template-columns:1fr;grid-template-rows:1fr;min-height:300px}
+  .rel img{grid-area:1/1;min-height:300px;height:320px;width:100%}
+  .rel div{grid-area:1/1;align-self:end;padding:48px 18px 20px;background:linear-gradient(180deg,transparent 0%,rgba(7,7,9,.72) 22%,rgba(7,7,9,.96) 62%);border-top:0}
+  .rel h3{font-size:22px;margin:10px 0 8px;color:#f5f1e8}
+  .rel p{color:#ddd6de}
+
+  .hero-visual{min-height:min(62vh,560px)}
   .hero-copy{border-left:0;border-top:1px solid rgba(201,164,93,.12);padding:56px 6vw 70px}
   .specs,.assurance{grid-template-columns:1fr 1fr}
   .motif{grid-template-columns:1fr}
@@ -128,9 +155,10 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 <body>
 <div id="progress"></div>
 <nav class="nav">
-  <a class="brand" href="../index.html"><strong>MITSUYASU YOKOTA</strong><small data-ja="Waglass / 空間" data-en="Waglass / Space">Waglass / 空間</small></a>
-  <div class="navlinks">
-    <a href="../index.html#waglass">Waglass</a>
+  <a class="brand" href="../index.html"><strong>MITSUYASU YOKOTA</strong><small data-ja="和硝子 / Kimono Glass Art" data-en="Wa-Glass / Kimono Glass Art">和硝子 / Kimono Glass Art</small></a>
+  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <a href="../index.html#waglass" data-ja="和硝子" data-en="Wa-Glass">和硝子</a>
     <a href="../index.html#purchase">Collect</a>
     <a href="../history.html">History</a>
     <a class="nav-cta" href="../index.html?type=work&amp;work=%E9%87%91%E6%A1%9C%E8%8F%AF%E8%88%9E#contact" data-ja="問い合わせ" data-en="Inquire">問い合わせ</a>
@@ -143,10 +171,10 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     <img src="../assets/kinouka-mai.webp" alt="和硝子 金桜華舞">
   </div>
   <div class="hero-copy">
-    <div class="crumb"><a href="../index.html" data-ja="作品一覧" data-en="Works">作品一覧</a> / Waglass / <span data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</span></div>
-    <div class="kicker">WAGLASS / ONE OF ONE</div>
+    <div class="crumb"><a href="../index.html" data-ja="作品一覧" data-en="Works">作品一覧</a> / Wa-Glass / <span data-ja="金桜華舞" data-en="Kinouka Mai">金桜華舞</span></div>
+    <div class="kicker">WA-GLASS / KIMONO GLASS ART</div>
     <h1 data-ja="金桜華舞<em>KINOUKA MAI</em>" data-en="Kinouka Mai<em>金桜華舞</em>">金桜華舞<em>KINOUKA MAI</em></h1>
-    <p class="hero-lead" data-ja="京金彩という京都の技法で金の桜を表現した和硝子。日本を象徴する桜に、金色で富を、銀色で桜の枝を重ね、ぼかし加工を施しています。" data-en="A Waglass work using Kyoto kinsai to render golden sakura. Cherry blossoms signify Japan; gold expresses prosperity, silver the branches — finished with bokashi dyeing.">京金彩という京都の技法で金の桜を表現した和硝子。日本を象徴する桜に、金色で富を、銀色で桜の枝を重ね、ぼかし加工を施しています。</p>
+    <p class="hero-lead" data-ja="京金彩という京都の技法で金の桜を表現した和硝子。日本を象徴する桜に、金色で富を、銀色で桜の枝を重ね、ぼかし加工を施しています。" data-en="A Wa-Glass work using Kyoto kinsai to render golden sakura. Cherry blossoms signify Japan; gold expresses prosperity, silver the branches — finished with bokashi dyeing.">京金彩という京都の技法で金の桜を表現した和硝子。日本を象徴する桜に、金色で富を、銀色で桜の枝を重ね、ぼかし加工を施しています。</p>
     <div class="status-row">
       <span class="pill" data-ja="在庫: 1" data-en="Stock: 1">在庫: 1</span>
       <span class="pill">ONE OF ONE</span>
@@ -168,7 +196,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     </div>
     <div class="specs reveal">
       <div class="spec"><b>Title</b><span data-ja="金桜華舞 / Kinouka Mai" data-en="Kinouka Mai / 金桜華舞">金桜華舞 / Kinouka Mai</span></div>
-      <div class="spec"><b>Category</b><span>Waglass</span></div>
+      <div class="spec"><b>Category</b><span data-ja="和硝子 / Wa-Glass" data-en="Wa-Glass / Kimono Glass Art">和硝子 / Wa-Glass</span></div>
       <div class="spec"><b>Year</b><span>2019</span></div>
       <div class="spec"><b>Edition</b><span data-ja="一点物" data-en="One of One">一点物</span></div>
       <div class="spec"><b>Material</b><span data-ja="京金彩／友禅染め／ぼかし加工／硝子" data-en="Kyoto kinsai / yuzen dyeing / bokashi / glass">京金彩／友禅染め／ぼかし加工／硝子</span></div>
@@ -207,7 +235,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     <div class="section-head reveal">
       <div class="kicker">GALLERY</div>
       <h2 data-ja="光の中の、<br><span class='gold'>金桜華舞。</span>" data-en="Kinouka Mai,<br><span class='gold'>in light.</span>">光の中の、<br><span class="gold">金桜華舞。</span></h2>
-      <p data-ja="現在ご提供の写真は1点です。追加アングル・空間設置写真は xxxx。" data-en="One photograph is currently available. Additional angles and in-space photography: xxxx.">現在ご提供の写真は1点です。追加アングル・空間設置写真は xxxx。</p>
+      <p data-ja="現在ご提供の写真は正面とディテールの2点です。空間設置写真はお問い合わせください。" data-en="Two photographs are currently available — front and detail. Please inquire for in-space photography.">現在ご提供の写真は正面とディテールの2点です。空間設置写真はお問い合わせください。</p>
     </div>
     <div class="dual reveal">
       <figure>
@@ -230,8 +258,8 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
     </div>
     <div class="assurance reveal">
       <div class="assure"><div class="icon">01</div><h3>One of One</h3><p data-ja="固有の金彩と染めを持つ一点物として制作されています。" data-en="Created as a singular work with its own kinsai and dyeing.">固有の金彩と染めを持つ一点物として制作されています。</p></div>
-      <div class="assure"><div class="icon">02</div><h3 data-ja="真作証明" data-en="Authenticity">真作証明</h3><p data-ja="真作証明書あり。署名・落款の詳細は xxxx。" data-en="Certificate of Authenticity included. Signature and seal details: xxxx.">真作証明書あり。署名・落款の詳細は xxxx。</p></div>
-      <div class="assure"><div class="icon">03</div><h3 data-ja="国際配送" data-en="Worldwide Shipping">国際配送</h3><p data-ja="京都発送。美術品梱包・保険付き国際配送: xxxx" data-en="Ships from Kyoto. Art packaging and insured worldwide shipping: xxxx">京都発送。美術品梱包・保険付き国際配送: xxxx</p></div>
+      <div class="assure"><div class="icon">02</div><h3 data-ja="真作証明" data-en="Authenticity">真作証明</h3><p data-ja="真作証明書あり。作家直筆の署名・落款入り。" data-en="Certificate of Authenticity included. Hand-signed by the artist.">真作証明書あり。作家直筆の署名・落款入り。</p></div>
+      <div class="assure"><div class="icon">03</div><h3 data-ja="国際配送" data-en="Worldwide Shipping">国際配送</h3><p data-ja="京都発送。美術品梱包・保険付き国際配送の詳細はお問い合わせください。" data-en="Ships from Kyoto. Please inquire for art packaging and insured worldwide shipping details.">京都発送。美術品梱包・保険付き国際配送の詳細はお問い合わせください。</p></div>
       <div class="assure"><div class="icon">04</div><h3 data-ja="関税について" data-en="Customs">関税について</h3><p data-ja="輸入関税・VAT は到着国の規定により購入者負担となる場合があります。" data-en="Import duties and VAT may be payable by the buyer under local regulations.">輸入関税・VAT は到着国の規定により購入者負担となる場合があります。</p></div>
     </div>
   </div>
@@ -247,7 +275,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
         <a class="btn primary" href="../index.html?type=work&amp;work=%E9%87%91%E6%A1%9C%E8%8F%AF%E8%88%9E#contact" data-ja="この作品について問い合わせる →" data-en="Inquire about this work →">この作品について問い合わせる →</a>
         <a class="btn" href="../index.html#waglass" data-ja="他の作品を見る →" data-en="View other works →">他の作品を見る →</a>
       </div>
-      <p class="cta-note">Shipping origin: Kyoto, Japan / Worldwide shipping: xxxx / Sample draft</p>
+      <p class="cta-note" data-ja="発送元: 京都 / 国際配送の詳細はお問い合わせください" data-en="Shipping origin: Kyoto, Japan / Worldwide shipping: please inquire">発送元: 京都 / 国際配送の詳細はお問い合わせください</p>
     </div>
     <div class="cta-side">
       <img src="../assets/kinouka-mai.webp" alt="金桜華舞">
@@ -262,18 +290,18 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
       <h2 data-ja="あわせて見る。" data-en="You may also like.">あわせて見る。</h2>
     </div>
     <div class="related reveal">
-      <a class="rel" href="katsushika-hokusai.html">
-        <img src="../assets/katsushika-hokusai.webp" alt="葛飾北斎">
+      <a class="rel" href="tansui.html">
+        <img src="../assets/tansui.webp" alt="淡透">
         <div>
-          <div class="type">WAGLASS / SOLD OUT</div>
-          <h3 data-ja="葛飾北斎" data-en="Katsushika Hokusai">葛飾北斎</h3>
-          <p data-ja="富岳三十六景「神奈川沖浪裏」を硝子で完全再現。ダイヤモンド25石。" data-en="A glass recreation of Hokusai's Great Wave off Kanagawa, set with 25 diamonds.">富岳三十六景「神奈川沖浪裏」を硝子で完全再現。ダイヤモンド25石。</p>
+          <div class="type">WA-GLASS</div>
+          <h3 data-ja="淡透" data-en="Tansui">淡透</h3>
+          <p data-ja="辻が花をモチーフに、地色の透明感と華が浮き出る技法。" data-en="A Tsujigahana motif with translucent ground and flowers that rise from it.">辻が花をモチーフに、地色の透明感と華が浮き出る技法。</p>
         </div>
       </a>
       <a class="rel" href="sousui.html">
         <img src="../assets/sousui-1.webp" alt="蒼翠">
         <div>
-          <div class="type">WAGLASS</div>
+          <div class="type">WA-GLASS</div>
           <h3 data-ja="蒼翠" data-en="Sousui">蒼翠</h3>
           <p data-ja="辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。" data-en="Wisteria in a Tsujigahana motif, woven with gold, silver and blue-green threads.">辻が花文様の藤を、金銀青緑の糸と京金彩で織り上げた一点物。</p>
         </div>
@@ -285,7 +313,7 @@ footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;flex-wrap:
 
 <footer>
   <span>&#169; MITSUYASU YOKOTA</span>
-  <span>KYOTO, JAPAN / SAMPLE DETAIL</span>
+  <span>KYOTO, JAPAN</span>
 </footer>
 
 <script>
@@ -302,6 +330,20 @@ jp.onclick=()=>setLang('ja');
 en.onclick=()=>setLang('en');
 setLang('en');
 document.documentElement.classList.add('lang-ready');
+
+(function(){
+  const toggle=document.querySelector('.nav-toggle');
+  const panel=document.getElementById('navlinks');
+  if(!toggle||!panel) return;
+  const close=()=>{panel.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');};
+  toggle.addEventListener('click',()=>{
+    const open=panel.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  window.addEventListener('resize',()=>{if(innerWidth>980) close();});
+})();
+
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 window.addEventListener('scroll',()=>{

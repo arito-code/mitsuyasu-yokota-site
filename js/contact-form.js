@@ -1,9 +1,4 @@
-/**
- * Inquiry form → Google Apps Script → Spreadsheet
- *
- * After deploying GAS (see CONTACT_FORM_SETUP.md), paste the Web App URL below.
- * Leave empty to show a setup message instead of sending.
- */
+/** Inquiry form → Google Apps Script → Spreadsheet */
 (function () {
   const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyzWkEP9Z6bMG-NT1_k_fC7PyueWCpXSVSjD_9vQiR_uICyn7ynBiJJQ9xqbSlwjZWy/exec';
 
@@ -142,8 +137,8 @@
             status,
             'error',
             t(
-              'フォーム接続の設定前です。CONTACT_FORM_SETUP.md の手順で GAS URL を設定してください。',
-              'Form endpoint is not configured yet. Set the GAS URL per CONTACT_FORM_SETUP.md.'
+              '送信できませんでした。お手数ですが、時間をおいて再度お試しいただくか、メールでお問い合わせください。',
+              'Unable to send right now. Please try again later, or contact us by email.'
             )
           );
         } else {
